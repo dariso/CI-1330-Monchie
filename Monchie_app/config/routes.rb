@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   resources :usuario_clientes
-=======
   resources :menus
->>>>>>> 64ba6551bbd92387cb212e4f67a6371804c25fa9
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
