@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :usuario_clientes
+  
   resources :menus
 
 
