@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Menu:</strong>
+  <%= @orden.menu_id %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @orden.usuario_id %>
+</p>
+
+<%= link_to 'Edit', edit_orden_path(@orden) %> |
+<%= link_to 'Back', ordens_path %>

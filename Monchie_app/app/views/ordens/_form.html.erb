@@ -1,0 +1,25 @@
+<%= form_for(@orden) do |f| %>
+  <% if @orden.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@orden.errors.count, "error") %> prohibited this orden from being saved:</h2>
+
+      <ul>
+      <% @orden.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :menu_id %><br>
+    <%= f.number_field :menu_id %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario_id %><br>
+    <%= f.number_field :usuario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
