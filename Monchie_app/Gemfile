@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'execjs'
-group :production do
- gem 'libv8', '~> 3.16.14.3'
- gem 'therubyracer', :platform => :ruby
-end
+gem 'therubyracer'
+#group :production do
+# gem 'libv8', '~> 3.16.14.3'
+ #gem 'therubyracer', :platform => :ruby
+#end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'

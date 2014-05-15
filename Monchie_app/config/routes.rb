@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :productos_vendidos
+
   get 'static_pages/home'
 
   get 'static_pages/help'
@@ -9,8 +11,6 @@ Rails.application.routes.draw do
   resources :ordens
 
   resources :restaurantes
-
-  resources :productos
 
   resources :usuario_clientes
   
