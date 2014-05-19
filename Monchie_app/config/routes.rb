@@ -13,9 +13,7 @@ Rails.application.routes.draw do
   resources :restaurantes
 
   resources :usuario_clientes
-  
-  resources :menus
-  
+    
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
