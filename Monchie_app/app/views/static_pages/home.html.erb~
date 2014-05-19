@@ -1,3 +1,3 @@
 <h1>Bienvenido a Monchie!</h1>
 <p><%= link_to "Entrar como Dependiente", productos_path %></p>
-<p><%= link_to "Entrar como Cliente", controller:"carrito",action:"index" %></p>
+<p>Entrar como Cliente</p>

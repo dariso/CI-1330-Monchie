@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :ordens
   resources :productos
   resources :restaurantes
+
   resources :usuario_clientes
   root 'static_pages#home'
 
