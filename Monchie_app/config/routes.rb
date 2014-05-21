@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
+  get 'restaurantes/selRestaurante'
+
+  get 'productos/selProductos'
+
   resources :ordens
   resources :productos
   resources :restaurantes

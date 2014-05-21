@@ -2,17 +2,20 @@
 
 <table border=1>
 	<tr>
-		<td width="800" height="100" >
-		<%= link_to "Menu", productos_path,{:target => "menu"} %>
-		<iframe name="menu" width="800" height="100"  ></iframe>
+		<td width="800" height="200" >
+		<%= link_to "Menu", productos_selProductos_path,{:target => "menu"} %>
+        <iframe name="menu" width="800" height="300"  ></iframe>
 		</td>
 
 	</tr>
 	<tr>
-		<td width="800" height="100">
+		<td width="800" height="200">
 		<%= link_to "Orden", ordens_path,{:target => "ordenes"} %>
-		<iframe name="ordenes" width="800" height="100"  ></iframe>
+		<iframe name="ordenes" width="800" height="300"  ></iframe>
 		</td>
 
 	</tr>
 </table>
+
+<p>Proceder a Pagar</p>
+<%= link_to 'Atras', restaurantes_selRestaurante_path %>
