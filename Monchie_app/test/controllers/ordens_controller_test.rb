@@ -18,7 +18,7 @@ class OrdensControllerTest < ActionController::TestCase
 
   test "should create orden" do
     assert_difference('Orden.count') do
-      post :create, orden: { menu_id: @orden.menu_id, usuario_id: @orden.usuario_id }
+      post :create, orden: { fecha: @orden.fecha }
     end
 
     assert_redirected_to orden_path(assigns(:orden))
@@ -35,7 +35,7 @@ class OrdensControllerTest < ActionController::TestCase
   end
 
   test "should update orden" do
-    patch :update, id: @orden, orden: { menu_id: @orden.menu_id, usuario_id: @orden.usuario_id }
+    patch :update, id: @orden, orden: { fecha: @orden.fecha }
     assert_redirected_to orden_path(assigns(:orden))
   end
 

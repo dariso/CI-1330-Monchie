@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :ordens
+
   get 'carrito/index'
 
   resources :productos_vendidos
@@ -13,8 +15,6 @@ Rails.application.routes.draw do
   get 'restaurantes/selRestaurante'
 
   get 'productos/selProductos'
-
-  resources :ordens
   resources :productos
   resources :restaurantes
   resources :usuario_clientes

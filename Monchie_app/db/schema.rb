@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140520063303) do
+ActiveRecord::Schema.define(version: 20140521165013) do
 
   create_table "ordens", force: true do |t|
-    t.integer  "menu_id"
-    t.integer  "usuario_id"
+    t.datetime "fecha"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
