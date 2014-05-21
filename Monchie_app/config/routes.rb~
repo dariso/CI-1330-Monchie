@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :ordens
+
   get 'carrito/index'
 
   resources :productos_vendidos
@@ -10,10 +12,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  resources :ordens
+  get 'restaurantes/selRestaurante'
+
+  get 'productos/selProductos'
   resources :productos
   resources :restaurantes
-
   resources :usuario_clientes
   root 'static_pages#home'
 

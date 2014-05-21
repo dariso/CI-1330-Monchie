@@ -3,7 +3,7 @@
 <table border=1>
 	<tr>
 		<td width="800" height="200" >
-		<%= link_to "Menu", productos_selProductos_path,{:target => "menu"} %>
+		<%=  productos_selProductos_path,{:target => "menu"} %>
         <iframe name="menu" width="800" height="300"  ></iframe>
 		</td>
 
@@ -16,14 +16,14 @@
 
 	</tr>
 </table>
-<<<<<<< HEAD
+
 <input type="radio" name="pedido" value="">
 Express
 
 <input type="radio" name="pedido" value="">
 Restaurante
-=======
+
 
 <p>Proceder a Pagar</p>
 <%= link_to 'Atras', restaurantes_selRestaurante_path %>
->>>>>>> 423785b986fa622a7c02c375ad7a32d9609cd9c0
+

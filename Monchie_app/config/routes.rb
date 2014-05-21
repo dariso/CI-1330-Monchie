@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'carrito/index'
 
-  resources :productos_vendidos
+  get 'carrito/pagoOrden'	
 
   get 'static_pages/home'
 
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :productos
   resources :restaurantes
   resources :usuario_clientes
+  resources :productos_vendidos
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
