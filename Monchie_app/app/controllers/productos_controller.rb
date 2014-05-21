@@ -25,6 +25,7 @@ class ProductosController < ApplicationController
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
+    @producto.restaurante_id = 1
 
     respond_to do |format|
       if @producto.save
@@ -59,6 +60,10 @@ class ProductosController < ApplicationController
       format.html { redirect_to productos_url }
       format.json { head :no_content }
     end
+  end
+
+  def selProductos
+    @productos = Producto.all
   end
 
   private

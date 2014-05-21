@@ -2,8 +2,16 @@
 
 one:
   nombre: MyString
+  telefono: MyString
+  provincia: MyString
+  canton: MyString
+  distrito: MyString
   direccion: MyString
 
 two:
   nombre: MyString
+  telefono: MyString
+  provincia: MyString
+  canton: MyString
+  distrito: MyString
   direccion: MyString

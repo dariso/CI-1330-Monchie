@@ -21,6 +21,10 @@ class RestaurantesController < ApplicationController
   def edit
   end
 
+  def selRestaurante
+    @restaurantes = Restaurante.all
+  end
+
   # POST /restaurantes
   # POST /restaurantes.json
   def create
@@ -61,6 +65,9 @@ class RestaurantesController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurante
@@ -69,6 +76,6 @@ class RestaurantesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurante_params
-      params.require(:restaurante).permit(:nombre, :direccion)
+      params.require(:restaurante).permit(:nombre, :telefono, :provincia, :canton, :distrito, :direccion)
     end
 end

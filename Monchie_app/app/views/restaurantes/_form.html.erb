@@ -16,10 +16,26 @@
     <%= f.text_field :nombre %>
   </div>
   <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :provincia %><br>
+    <%= f.text_field :provincia %>
+  </div>
+  <div class="field">
+    <%= f.label :canton %><br>
+    <%= f.text_field :canton %>
+  </div>
+  <div class="field">
+    <%= f.label :distrito %><br>
+    <%= f.text_field :distrito %>
+  </div>
+  <div class="field">
     <%= f.label :direccion %><br>
     <%= f.text_field :direccion %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Registrar Restaurante" %>
   </div>
 <% end %>
