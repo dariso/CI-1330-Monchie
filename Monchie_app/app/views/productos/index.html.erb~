@@ -1,4 +1,4 @@
-<h1>Listing productos</h1>
+<h1>Productos</h1>
 
 <table>
   <thead>
@@ -11,7 +11,7 @@
     </tr>
   </thead>
 
-  <tbody bgcolor="#18BDC3">
+  <tbody>
     <% @productos.each do |producto| %>
       <tr>
         <td><%= producto.nombre %></td>
@@ -28,4 +28,6 @@
 
 <br>
 
-<%= link_to 'New Producto', new_producto_path %>
+<%= link_to 'Nuevo Producto', new_producto_path %>
+<%= link_to 'Nuevo Producto', destroy_producto_path %>
+<%= link_to 'Atras',static_pages_home_path%>

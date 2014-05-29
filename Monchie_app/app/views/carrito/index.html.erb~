@@ -1,29 +1,34 @@
+
 <h1>Carrito</h1>
 
-<table border=1 color="red">
+<table border=1>
 	<tr>
-		<td width="800" height="100" >
-		<%= link_to "Menu", productos_path,{:target => "menu"} %>
-		<iframe name="menu" width="800" height="100"  ></iframe>
+		<td width="800" height="200" >
+		
+        <iframe src=<%=productos_selProductos_path%> name="menu" width="800" height="300" " ></iframe>
 		</td>
 
 	</tr>
 	<tr>
-		<td width="800" height="100">
+		<td width="800" height="200">
 		<%= link_to "Orden", ordens_path,{:target => "ordenes"} %>
-		<iframe name="ordenes" width="800" height="100"  ></iframe>
+		<iframe name="ordenes" width="800" height="300"  ></iframe>
 		</td>
 
-	</tr>
-	<tr>
-		<td width="800" height="100">
-		<%= link_to "Menu", productos_path,{:target => "productosVendidos"} %>
-		<iframe name="productosVendidos" width="800" height="100"  ></iframe>
-		</td>
 	</tr>
 </table>
-<input type="radio" name="pedido" value="">
-Express
 
-<input type="radio" name="pedido" value="">
-Restaurante
+<%= radio_button_tag(:entrega, 1) %>
+<%= label_tag(:entrega_Exp, "Express") %>
+<%= radio_button_tag(:entrega, 2) %>
+<%= label_tag(:entrega_Restaurante, "Restaurante") %>
+<br>
+
+
+
+ <button name="button" type="submit">
+     <strong>Pagar</strong>
+ </button>
+<p>Proceder a Pagar</p>
+<%= link_to 'Atras', restaurantes_selRestaurante_path %>
+
