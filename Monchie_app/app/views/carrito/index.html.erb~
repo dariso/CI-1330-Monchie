@@ -11,18 +11,26 @@
 	</tr>
 	<tr>
 		<td width="800" height="200">
-		<%= link_to "Orden", ordens_path,{:target => "ordenes"} %>
-		<iframe name="ordenes" width="800" height="300"  ></iframe>
+		<iframe src=<%=ordens_path%> name="ordenes" width="800" height="300"  ></iframe>
 		</td>
 
 	</tr>
 </table>
+<<<<<<< HEAD
 
 <%= radio_button_tag(:entrega, 1) %>
 <%= label_tag(:entrega_Exp, "Express") %>
 <%= radio_button_tag(:entrega, 2) %>
 <%= label_tag(:entrega_Restaurante, "Restaurante") %>
 <br>
+=======
+
+<input type="radio" name="pedido" value="">
+Express
+
+<input type="radio" name="pedido" value="">
+Restaurante
+>>>>>>> bc5c654dc6bd1c5650b8aa1a992c0de43323c389
 
 
 

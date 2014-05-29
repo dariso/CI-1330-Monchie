@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140520063303) do
 
   create_table "ordens", force: true do |t|
     t.integer  "menu_id"
     t.integer  "usuario_id"
+=======
+ActiveRecord::Schema.define(version: 20140521165013) do
+
+  create_table "ordens", force: true do |t|
+    t.datetime "fecha"
+>>>>>>> bc5c654dc6bd1c5650b8aa1a992c0de43323c389
     t.datetime "created_at"
     t.datetime "updated_at"
   end
