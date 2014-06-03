@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602050034) do
+ActiveRecord::Schema.define(version: 20140602043335) do
 
   create_table "ordens", force: true do |t|
     t.datetime "fecha"
