@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602043335) do
+ActiveRecord::Schema.define(version: 20140604082924) do
+
+  create_table "emails", force: true do |t|
+    t.string   "email"
+    t.integer  "emailable_id"
+    t.string   "emailable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "estados", force: true do |t|
+    t.string   "estado"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "ordens", force: true do |t|
     t.datetime "fecha"
@@ -39,6 +53,14 @@ ActiveRecord::Schema.define(version: 20140602043335) do
     t.string   "canton"
     t.string   "distrito"
     t.string   "direccion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "telefonos", force: true do |t|
+    t.string   "telefono"
+    t.integer  "telefonable_id"
+    t.string   "telefonable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

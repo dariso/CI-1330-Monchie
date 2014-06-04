@@ -14,6 +14,13 @@
   <strong>Direccion:</strong>
   <%= @usuario_cliente.direccion %>
 </p>
+ 
+ <% @usuario_cliente.telefonos.each do |t| %>
+    <p>
+      <strong>Telefono:</strong>
+      <%= t.telefono %>
+    </p>
+  <% end %>
 
 <%= link_to 'Edit', edit_usuario_cliente_path(@usuario_cliente) %> |
 <%= link_to 'Back', usuario_clientes_path %>

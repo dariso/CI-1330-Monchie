@@ -24,7 +24,7 @@
     <%= f.text_field :direccion %>
   </div>
   
-  <%@usuario_cliente.with_blank_telefono%>
+  
   <%= f.fields_for(:telefonos) do |telefonos_form| %>
       <div class="field">
       <%=  telefonos_form.label 'Telefono:' %><br>

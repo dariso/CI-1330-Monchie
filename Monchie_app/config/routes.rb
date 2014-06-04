@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :estados
+
   resources :ordens
 
   get 'carrito/index'
