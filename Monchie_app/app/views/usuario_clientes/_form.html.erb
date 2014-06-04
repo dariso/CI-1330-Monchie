@@ -20,14 +20,18 @@
     <%= f.text_field :apellidos %>
   </div>
   <div class="field">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
-  </div>
-  <div class="field">
     <%= f.label :direccion %><br>
     <%= f.text_field :direccion %>
   </div>
+  
+  <%= f.fields_for(:telefonos) do |telefonos_form| %>
+      <div class="field">
+      <%=  telefonos_form.label 'Telefono:' %><br>
+      <%=  telefonos_form.text_field :telefono %>
+      </div>
+  <% end %>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Ok" %>
   </div>
 <% end %>
