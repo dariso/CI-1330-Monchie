@@ -11,6 +11,7 @@
   </thead>
 
   <tbody>
+
     <% @productos.each do |producto| %>
       <tr>
         <td><%= producto.nombre %></td>
@@ -18,12 +19,14 @@
         <td> <input type="text" size="3"> </td>>
         <td> <p>Seleccionar</p> </td>
 	<td>
-<input name="eula[accepted]" type="hidden" value="no" />
+	<input name="eula[accepted]" type="hidden" value="no" />
    <input type="checkbox" class="eula_check" id="eula_accepted" name="eula[accepted]" value="yes" />
 
 	</td>
       </tr>
     <% end %>
+
+    
   </tbody>
 </table>
 

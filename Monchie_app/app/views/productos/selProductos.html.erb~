@@ -11,15 +11,22 @@
   </thead>
 
   <tbody>
+  =begin
     <% @productos.each do |producto| %>
       <tr>
         <td><%= producto.nombre %></td>
         <td><%= producto.precio %></td>
         <td> <input type="text" size="3"> </td>>
         <td> <p>Seleccionar</p> </td>
- <input name="eula[accepted]" type="hidden" value="no" />    <input type="checkbox" class="eula_check" id="eula_accepted" name="eula[accepted]" value="yes" />
+	<td>
+	<input name="eula[accepted]" type="hidden" value="no" />
+   <input type="checkbox" class="eula_check" id="eula_accepted" name="eula[accepted]" value="yes" />
+
+	</td>
       </tr>
     <% end %>
+ =end
+    
   </tbody>
 </table>
 
