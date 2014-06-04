@@ -7,9 +7,8 @@ class UsuarioCliente < ActiveRecord::Base
                                 },
                                 allow_destroy:true
 								
-    def with_blank_telefono
-		telefonos.build
-		telefonos.build
+    def with_blank_telefonos
+		2.times{ telefonos.build }
 		self
 	end
 end

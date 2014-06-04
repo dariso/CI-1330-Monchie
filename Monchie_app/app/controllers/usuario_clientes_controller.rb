@@ -15,6 +15,7 @@ class UsuarioClientesController < ApplicationController
   # GET /usuario_clientes/new
   def new
     @usuario_cliente = UsuarioCliente.new
+	@usuario_cliente.with_blank_telefonos
   end
 
   # GET /usuario_clientes/1/edit
@@ -40,6 +41,7 @@ class UsuarioClientesController < ApplicationController
   # PATCH/PUT /usuario_clientes/1
   # PATCH/PUT /usuario_clientes/1.json
   def update
+    @usuario_cliente = UsuarioCliente.find(params[:id])
     respond_to do |format|
       if @usuario_cliente.update(usuario_cliente_params)
         format.html { redirect_to @usuario_cliente, notice: 'Usuario cliente was successfully updated.' }
@@ -69,6 +71,6 @@ class UsuarioClientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_cliente_params
-      params.require(:usuario_cliente).permit(:nombre,:apellidos,:direccion,telefonos_attributes:[:telefono])
+      params.require(:usuario_cliente).permit(:nombre,:apellidos,:direccion,telefonos_attributes:[:telefono,:id])
     end
 end
