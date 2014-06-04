@@ -17,7 +17,6 @@
         <td><%= producto.nombre %></td>
         <td><%= producto.descripcion %></td>
         <td><%= producto.precio %></td>
-        <td><%= producto.restaurante_id %></td>
         <td><%= link_to 'Show', producto %></td>
         <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
         <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,5 +28,5 @@
 <br>
 
 <%= link_to 'Nuevo Producto', new_producto_path %>
-<%= link_to 'Nuevo Producto', destroy_producto_path %>
+
 <%= link_to 'Atras',static_pages_home_path%>
