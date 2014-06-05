@@ -64,6 +64,7 @@ class ProductosController < ApplicationController
 
   def selProductos
     @productos = Producto.all
+    @productoComprado=params[:seleccionProducto]
   end
 
   private

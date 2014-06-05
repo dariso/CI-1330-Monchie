@@ -11,21 +11,26 @@
   </thead>
 
   <tbody>
-  =begin
+
     <% @productos.each do |producto| %>
       <tr>
         <td><%= producto.nombre %></td>
         <td><%= producto.precio %></td>
-        <td> <input type="text" size="3"> </td>>
+        <td> <input type="text" size="3"> </td>
         <td> <p>Seleccionar</p> </td>
 	<td>
-	<input name="eula[accepted]" type="hidden" value="no" />
-   <input type="checkbox" class="eula_check" id="eula_accepted" name="eula[accepted]" value="yes" />
-
+   	<input type="checkbox" name="seleccionProducto"/>
 	</td>
+	
       </tr>
+
     <% end %>
- =end
+    <tr><td>             
+    <%= button_to 'Agregar Orden', ordens_path, method: :post %>
+    </td></tr>
+     
+
+     
     
   </tbody>
 </table>

@@ -5,16 +5,11 @@
 	<tr>
 		<td width="800" height="200" >
 		
-        <iframe src=<%=productos_form_path%> name="menu" width="800" height="300" " ></iframe>
+        <iframe src=<%=productos_selProductos_path%> name="menu" width="800" height="300" " ></iframe>
 		</td>
 
 	</tr>
-	<tr>
-		<td width="800" height="200">
-		<iframe src=<%=ordens_path%> name="ordenes" width="800" height="300"  ></iframe>
-		</td>
 
-	</tr>
 </table>
 
 
