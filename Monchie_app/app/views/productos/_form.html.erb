@@ -1,29 +1,26 @@
-<%= form_for(@producto) do |f| %>
-  <% if @producto.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
-
-      <ul>
-      <% @producto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @producto, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombre, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :descripcion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :descripcion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :precio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :precio, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :descripcion %><br>
-    <%= f.text_field :descripcion %>
-  </div>
-  <div class="field">
-    <%= f.label :precio %><br>
-    <%= f.number_field :precio %>
-  </div>
- <div class="actions">
-    <%= f.submit "Registrar Producto" %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                productos_path, :class => 'btn' %>
   </div>
 <% end %>

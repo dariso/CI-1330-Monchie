@@ -1,29 +1,29 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Restaurante -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @restaurante.nombre %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nombre) %>:</strong></dt>
+  <dd><%= @restaurante.nombre %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:provincia) %>:</strong></dt>
+  <dd><%= @restaurante.provincia %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:canton) %>:</strong></dt>
+  <dd><%= @restaurante.canton %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:distrito) %>:</strong></dt>
+  <dd><%= @restaurante.distrito %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:direccion) %>:</strong></dt>
+  <dd><%= @restaurante.direccion %></dd>
+</dl>
 
-<p>
-  <strong>Provincia:</strong>
-  <%= @restaurante.provincia %>
-</p>
-
-<p>
-  <strong>Canton:</strong>
-  <%= @restaurante.canton %>
-</p>
-
-<p>
-  <strong>Distrito:</strong>
-  <%= @restaurante.distrito %>
-</p>
-
-<p>
-  <strong>Direccion:</strong>
-  <%= @restaurante.direccion %>
-</p>
-
-<%= link_to 'Edit', edit_restaurante_path(@restaurante) %> |
-<%= link_to 'Back', restaurantes_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              restaurantes_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_restaurante_path(@restaurante), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              restaurante_path(@restaurante),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

@@ -18,9 +18,9 @@
   <% @restaurantes.each do |restaurante| %>
       <tr>
         <td><%= link_to restaurante.nombre, carrito_index_path%></td>
-       
+        <!--
         <td><%#restaurante.telefono %></td>
-        
+        -->
         <td><%= restaurante.distrito %></td>
         <td><%= restaurante.direccion %></td>
       </tr>
