@@ -1,6 +1,6 @@
 <h3>Por favor Seleccione su Producto</h3>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -14,13 +14,13 @@
 
     <% @productos.each do |producto| %>
       <tr>
-        <td><%= producto.nombre %></td>
-        <td><%= producto.precio %></td>
-        <td> <input type="text" size="3"> </td>
+        <td id = "texto"><%= producto.nombre %></td>
+        <td id = "texto"><%= producto.precio %></td>
+     
        
-	<td>
+	<td id = "texto">
   
-   	<%= link_to 'Agregar Carrito', new_productos_vendido_path %>
+   	<%= link_to 'Agregar Carrito', new_productos_vendido_path, :class => 'btn' %>
 	</td>
 	
 	

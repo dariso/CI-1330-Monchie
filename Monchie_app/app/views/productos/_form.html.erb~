@@ -19,8 +19,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit "Agregar", :class => 'btn btn-primary' %>
-    <%= link_to "Cancelar",
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 productos_path, :class => 'btn' %>
   </div>
 <% end %>
