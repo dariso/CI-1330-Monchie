@@ -13,4 +13,14 @@
  *= require_tree .
  *= require_self
  */
- .class {background-image: url(<%=asset_path "monchie.jpg" %>) }
+body{
+
+background-color:#18BDC3;
+color: white;
+
+}
+
+#sidebar{
+color: #848484;
+}
+

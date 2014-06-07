@@ -1,37 +1,38 @@
-<%= form_for(@restaurante) do |f| %>
-  <% if @restaurante.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@restaurante.errors.count, "error") %> prohibited this restaurante from being saved:</h2>
-
-      <ul>
-      <% @restaurante.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= form_for @restaurante, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombre, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :provincia, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :provincia, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :canton, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :canton, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :distrito, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :distrito, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :direccion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :direccion, :class => 'text_field' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :provincia %><br>
-    <%= f.text_field :provincia %>
-  </div>
-  <div class="field">
-    <%= f.label :canton %><br>
-    <%= f.text_field :canton %>
-  </div>
-  <div class="field">
-    <%= f.label :distrito %><br>
-    <%= f.text_field :distrito %>
-  </div>
-  <div class="field">
-    <%= f.label :direccion %><br>
-    <%= f.text_field :direccion %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Registrar Restaurante" %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                restaurantes_path, :class => 'btn' %>
   </div>
 <% end %>
