@@ -1,5 +1,6 @@
 class UsuarioCliente < ActiveRecord::Base
 	has_many :ordens
+	has_one :cuenta_usuario
 	has_many :telefonos, as: :telefonable, dependent: :destroy
 	accepts_nested_attributes_for :telefonos,
                                 reject_if:lambda { |attrs|

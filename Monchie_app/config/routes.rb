@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :cuenta_usuarios
+
   resources :estados
 
   resources :ordens
