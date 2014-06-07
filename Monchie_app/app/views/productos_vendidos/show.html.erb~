@@ -7,4 +7,4 @@
 
 <%= link_to 'Edit', edit_productos_vendido_path(@productos_vendido) %> |
 
-<%= link_to 'Back', productos_selProductos_path %>
+<%= link_to 'Back', productos_path %>

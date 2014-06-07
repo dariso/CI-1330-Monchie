@@ -16,17 +16,19 @@
       <tr>
         <td><%= producto.nombre %></td>
         <td><%= producto.precio %></td>
-        <td> <input type="text" size="3"> </td>
-        <td> <p>Seleccionar</p> </td>
+     
+       
 	<td>
-   	<input type="checkbox" name="seleccionProducto"/>
+  
+   	<%= link_to 'Agregar Carrito', new_productos_vendido_path %>
 	</td>
+	
 	
       </tr>
 
     <% end %>
     <tr><td>             
-    <%= button_to 'Agregar Orden', productos_vendidos_path, method: :post %>
+
     </td></tr>
      
 

@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body >
-.class {background-image: url(<%=asset_path "monchie.jpg" %>) }
+
 <%= yield %>
 
 </body>
