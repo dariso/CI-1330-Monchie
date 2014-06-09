@@ -21,6 +21,15 @@
       <%= t.telefono %>
     </p>
   <% end %>
+  
+   <% @usuario_cliente.emails.each do |e| %>
+    <p>
+      <strong>Email:</strong>
+      <%= e.email %>
+    </p>
+  <% end %>
+  
+  
 
 <%= link_to 'Edit', edit_usuario_cliente_path(@usuario_cliente) %> |
 <%= link_to 'Back', usuario_clientes_path %>

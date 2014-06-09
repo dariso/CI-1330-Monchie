@@ -5,22 +5,18 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:descripcion) %></th>
       <th><%= model_class.human_attribute_name(:precio) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th><%=t '.actions', :default => "Acciones" %></th>
     </tr>
   </thead>
   <tbody>
     <% @productos.each do |producto| %>
       <tr>
-        <td><%= link_to producto.id, producto_path(producto) %></td>
-        <td><%= producto.nombre %></td>
-        <td><%= producto.descripcion %></td>
-        <td><%= producto.precio %></td>
-        <td><%=l producto.created_at %></td>
+        <td id = "texto"><%= producto.nombre %></td>
+        <td id = "texto"><%= producto.descripcion %></td>
+        <td id = "texto"><%= producto.precio %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_producto_path(producto), :class => 'btn btn-mini' %>

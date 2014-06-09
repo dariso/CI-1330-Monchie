@@ -7,7 +7,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit "Agregar", :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to "Cancelar",
                 productos_vendidos_path, :class => 'btn' %>
   </div>

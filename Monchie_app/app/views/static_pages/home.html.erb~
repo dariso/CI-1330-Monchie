@@ -1,8 +1,4 @@
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true%>
-  <%= csrf_meta_tags %>
-  
 <h1>Bienvenido a Monchie!</h1>
 <p><%= link_to "Entrar como Dependiente", productos_path %></p>
 <p><%= link_to "Entrar como Cliente", restaurantes_selRestaurante_path %></p>
-<%= link_to image_tag("rails.png", alt: "Rails")>
+

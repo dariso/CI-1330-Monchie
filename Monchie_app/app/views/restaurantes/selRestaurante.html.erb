@@ -17,19 +17,23 @@
   <tbody>
   <% @restaurantes.each do |restaurante| %>
       <tr>
+<<<<<<< HEAD
         <td>
         <%= link_to restaurante.nombre, carrito_index_path%>
         
         </td>
+=======
+        <td id = "texto"><%= link_to restaurante.nombre, carrito_index_path%></td>
+>>>>>>> 3bfe0c9c9a66fa5c86225fe962cbb39f56e3ad02
         <!--
         <td><%#restaurante.telefono %></td>
         -->
-        <td><%= restaurante.distrito %></td>
-        <td><%= restaurante.direccion %></td>
+        <td id = "texto"><%= restaurante.distrito %></td>
+        <td id = "texto"><%= restaurante.direccion %></td>
       </tr>
   <% end %>
   </tbody>
 
 </table>
 
-<%= link_to 'Atras', static_pages_home_path %>
+<%= link_to 'Atrás', static_pages_home_path, :class => 'btn' %>
