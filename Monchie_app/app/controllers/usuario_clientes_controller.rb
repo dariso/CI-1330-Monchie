@@ -15,7 +15,7 @@ class UsuarioClientesController < ApplicationController
   # GET /usuario_clientes/new
   def new
     @usuario_cliente = UsuarioCliente.new
-	@usuario_cliente.with_blank_telefonos
+	@usuario_cliente.with_blank_infoContacto
   end
 
   # GET /usuario_clientes/1/edit
@@ -71,6 +71,6 @@ class UsuarioClientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_cliente_params
-      params.require(:usuario_cliente).permit(:nombre,:apellidos,:direccion,telefonos_attributes:[:telefono,:id])
+      params.require(:usuario_cliente).permit(:nombre,:apellidos,:direccion,telefonos_attributes:[:telefono,:id],emails_attributes:[:email,:id])
     end
 end

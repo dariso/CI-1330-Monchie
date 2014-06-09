@@ -7,6 +7,7 @@
       <th>Apellidos</th>
       <th>Direccion</th>
 	  <th>Telefonos</th>
+	  <th>Email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,8 +18,9 @@
         <td><%= usuario_cliente.nombre %></td>
         <td><%= usuario_cliente.apellidos %></td>
         <td><%= usuario_cliente.direccion %></td>
-		<td><%= usuario_cliente.telefonos.count%></td>
-        <td><%= link_to 'Show', usuario_cliente %></td>
+		<td><%= usuario_cliente.telefonos.count %></td>
+		<td><%= usuario_cliente.emails.count %></td>
+		<td><%= link_to 'Show', usuario_cliente %></td>
         <td><%= link_to 'Edit', edit_usuario_cliente_path(usuario_cliente) %></td>
         <td><%= link_to 'Destroy', usuario_cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

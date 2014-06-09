@@ -1,4 +1,4 @@
-<h1>Nuevo Cliente</h1>
+<h1>New usuario_cliente</h1>
 
 <%= render 'form' %>
 
