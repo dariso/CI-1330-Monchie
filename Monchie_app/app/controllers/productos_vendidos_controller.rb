@@ -29,6 +29,11 @@ class ProductosVendidosController < ApplicationController
     respond_to do |format|
       if @productos_vendido.save
         format.html { redirect_to @productos_vendido, notice: 'Producto agregado exitosamente al carrito.' }
+        
+        
+        
+        
+        
         format.json { render :show, status: :created, location: @productos_vendido }
       else
         format.html { render :new }

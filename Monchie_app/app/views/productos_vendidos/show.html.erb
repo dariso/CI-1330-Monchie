@@ -8,14 +8,13 @@
   <dd><%= @productos_vendido.cantidad %></dd>
 </dl>
 
-<<<<<<< HEAD
+
 <%= link_to 'Edit', edit_productos_vendido_path(@productos_vendido) %> |
 
-<%= link_to 'Back', productos_selProductos_path %>
-=======
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              productos_vendidos_path, :class => 'btn'  %>
+              productos_selProductos_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_productos_vendido_path(@productos_vendido), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -24,4 +23,4 @@
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
 </div>
->>>>>>> c2ef49fef1ed4b87ae95f9538d905a4a46fdd291
+
