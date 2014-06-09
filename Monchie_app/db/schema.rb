@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609150528) do
+ActiveRecord::Schema.define(version: 20140609161130) do
 
   create_table "cuenta_usuarios", force: true do |t|
     t.string   "usuario"
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20140609150528) do
   end
 
   create_table "ordens", force: true do |t|
-    t.datetime "fecha"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "usuario_cliente_id"
