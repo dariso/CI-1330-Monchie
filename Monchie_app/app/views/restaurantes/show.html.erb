@@ -14,19 +14,15 @@
   <dd><%= @restaurante.distrito %></dd>
   <dt><strong><%= model_class.human_attribute_name(:direccion) %>:</strong></dt>
   <dd><%= @restaurante.direccion %></dd>
-  
-   <% @restaurante.telefonos.each do |t| %>
-    <p>
-      <strong>Telefono:</strong>
-      <%= t.telefono %>
-    </p>
+
+  <% @restaurante.telefonos.each do |t| %>
+      <dt><strong><%= model_class.human_attribute_name(:telefono) %>:</strong></dt>
+      <dd><%= t.telefono %></dd>
   <% end %>
-  
+
   <% @restaurante.emails.each do |e| %>
-    <p>
-      <strong>Email:</strong>
-      <%= e.email %>
-    </p>
+      <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+      <dd><%= e.email %></dd>
   <% end %>
   
   

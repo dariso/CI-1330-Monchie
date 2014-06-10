@@ -18,6 +18,25 @@
     </div>
   </div>
 
+    <%= f.fields_for(:telefonos) do |telefonos_form| %>
+        <div class="control-group">
+          <%=  telefonos_form.label 'Telefono:',:class => 'control-label' %>
+          <div class="controls">
+            <%=  telefonos_form.text_field :telefono, :class => 'text_field' %>
+          </div>
+        </div>
+    <% end %>
+
+    <%= f.fields_for(:emails) do |emails_form| %>
+        <div class="control-group">
+          <%=  emails_form.label 'Email:',:class => 'control-label' %>
+          <div class="controls">
+            <%=  emails_form.text_field :email, :class => 'text_field' %>
+          </div>
+        </div>
+    <% end %>
+
+
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

@@ -26,8 +26,8 @@
         <td><%= restaurante.canton %></td>
         <td><%= restaurante.distrito %></td>
         <td><%= restaurante.direccion %></td>
-        <td><%= restaurante.telefonos.count %></td>
-		<td><%= restaurante.emails.count %></td>
+        <td><%= restaurante.telefonos.first.telefono %></td>
+		<td><%= restaurante.emails.first.email %></td>
         <td><%=l restaurante.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

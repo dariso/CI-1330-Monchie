@@ -10,6 +10,17 @@
   <dd><%= @usuario_cliente.apellidos %></dd>
   <dt><strong><%= model_class.human_attribute_name(:direccion) %>:</strong></dt>
   <dd><%= @usuario_cliente.direccion %></dd>
+
+  <% @usuario_cliente.telefonos.each do |t| %>
+      <dt><strong><%= model_class.human_attribute_name(:telefono) %>:</strong></dt>
+      <dd><%= t.telefono %></dd>
+  <% end %>
+
+  <% @usuario_cliente.emails.each do |e| %>
+      <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+      <dd><%= e.email %></dd>
+  <% end %>
+
 </dl>
 
 <div class="form-actions">

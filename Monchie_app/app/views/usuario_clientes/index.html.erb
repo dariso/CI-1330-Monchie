@@ -9,6 +9,8 @@
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:apellidos) %></th>
       <th><%= model_class.human_attribute_name(:direccion) %></th>
+      <th><%= model_class.human_attribute_name(:telefono) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -20,6 +22,8 @@
         <td><%= usuario_cliente.nombre %></td>
         <td><%= usuario_cliente.apellidos %></td>
         <td><%= usuario_cliente.direccion %></td>
+        <td><%= usuario_cliente.telefonos.first.telefono %></td>
+        <td><%= usuario_cliente.emails.first.email %></td>
         <td><%=l usuario_cliente.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
