@@ -17,11 +17,12 @@
 
 </table>
 
+<%= form_for (@orden) do |f| %>
 
-<%= radio_button_tag(:entrega, 1) %>
-<%= label_tag(:entrega_Exp, "Express") %>
-<%= radio_button_tag(:entrega, 2) %>
-<%= label_tag(:entrega_Restaurante, "Restaurante") %>
+
+
+<% end %>
+
 <br>
 
 
