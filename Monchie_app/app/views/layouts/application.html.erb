@@ -46,12 +46,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">MonchieApp</a>
+          <a class="brand" href="/"><%= image_tag 'logo.jpg', alt: 'MonchieApp', width: '120', height: '60' %></a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Link1", "/path1", {class: "link"}  %></li>
+              <li><%= link_to "Link2", "/path2", {class: "link"}  %></li>
+              <li><%= link_to "Link3", "/path3", {class: "link"}  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

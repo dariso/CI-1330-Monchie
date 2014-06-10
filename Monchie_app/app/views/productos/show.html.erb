@@ -1,6 +1,6 @@
 <%- model_class = Producto -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1>Producto Actualizado!</h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -13,13 +13,13 @@
 </dl>
 
 <div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
+  <%= link_to "Atrás",
               productos_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+  <%= link_to "Editar",
               edit_producto_path(@producto), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%= link_to "Eliminar",
               producto_path(@producto),
               :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => '¿Está seguro que desea eliminar este producto?')) },
               :class => 'btn btn-danger' %>
 </div>
