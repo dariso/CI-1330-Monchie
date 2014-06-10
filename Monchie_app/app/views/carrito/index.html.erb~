@@ -1,7 +1,7 @@
 
 <h1>Carrito</h1>
 
-<table class="table table-striped" border=1>
+<table border=1>
 	<tr>
 		<td width="800" height="200" >
 		
@@ -12,11 +12,12 @@
 
 </table>
 
+<%= form_for (@orden) do |f| %>
 
-<%= radio_button_tag(:entrega, 1) %>
-<%= label_tag(:entrega_Exp, "Express") %>
-<%= radio_button_tag(:entrega, 2) %>
-<%= label_tag(:entrega_Restaurante, "Restaurante") %>
+
+
+<% end %>
+
 <br>
 
 
