@@ -1,7 +1,12 @@
 class CarritoController < ApplicationController
   def index
 
-    @usuario = UsuarioCliente.find_by_nombre("Daniel")
-    @usuario.ordens.create
+<<<<<<< HEAD
+   # @usuario = UsuarioCliente.find_by_nombre("Daniel")
+   # @usuario.ordens.create
+=======
+    @usuario = UsuarioCliente.first
+    @usuario.ordens.create!
+>>>>>>> e2ce8b7aec7c1718a7bf64b0276e6dbcd1bcac95
   end
 end

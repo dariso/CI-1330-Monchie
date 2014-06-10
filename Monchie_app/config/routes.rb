@@ -19,10 +19,15 @@ Rails.application.routes.draw do
   get 'restaurantes/selRestaurante'
 
   get 'productos/selProductos'
+   
+  
   resources :productos
   resources :restaurantes
   resources :usuario_clientes
   resources :productos_vendidos
+  
+  
+  
   root :to => "static_pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.

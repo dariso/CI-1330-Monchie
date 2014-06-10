@@ -5,8 +5,11 @@
     <tr>
       <th>Nombre</th>
       <th>Precio</th>
-      <th>Cantidad</th>
+<<<<<<< HEAD
+      <th colspan="2"></th>
+=======
       <th colspan="3"></th>
+>>>>>>> e2ce8b7aec7c1718a7bf64b0276e6dbcd1bcac95
     </tr>
   </thead>
 
@@ -14,26 +17,17 @@
 
     <% @productos.each do |producto| %>
       <tr>
-        <td id = "texto"><%= producto.nombre %></td>
+        <td id = "texto"><%= link_to producto.nombre, new_productos_vendido_path %></td>
         <td id = "texto"><%= producto.precio %></td>
-     
-       
-	<td id = "texto">
-  
-   	<%= link_to 'Agregar Carrito', new_productos_vendido_path, :class => 'btn' %>
-	</td>
-	
 	
       </tr>
 
     <% end %>
-    <tr><td>             
 
-    </td></tr>
-     
 
-     
-    
+
+
+
   </tbody>
 </table>
 

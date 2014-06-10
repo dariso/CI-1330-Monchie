@@ -13,26 +13,17 @@
 
     <% @productos.each do |producto| %>
       <tr>
-        <td id = "texto"><%= producto.nombre %></td>
+        <td id = "texto"><%= link_to producto.nombre, new_productos_vendido_path %></td>
         <td id = "texto"><%= producto.precio %></td>
-     
-       
-	<td id = "texto">
-  
-   	<%= link_to 'Agregar Carrito', new_productos_vendido_path, :class => 'btn' %>
-	</td>
-	
 	
       </tr>
 
     <% end %>
-    <tr><td>             
 
-    </td></tr>
-     
 
-     
-    
+
+
+
   </tbody>
 </table>
 

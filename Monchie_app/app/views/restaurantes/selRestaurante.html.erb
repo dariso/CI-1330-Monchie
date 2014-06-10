@@ -5,9 +5,7 @@
   <thead>
   <tr>
     <th>Nombre</th>
-     <!--
     <th>Telefono</th>
-      -->
     <th>Distrito</th>
     <th>Direccion</th>
     <th colspan="3"></th>
@@ -21,6 +19,7 @@
         <!--
         <td><%#restaurante.telefono %></td>
         -->
+        <td id = "texto"><%=  restaurante.telefonos.first.telefono %></td>
         <td id = "texto"><%= restaurante.distrito %></td>
         <td id = "texto"><%= restaurante.direccion %></td>
       </tr>
