@@ -1,6 +1,4 @@
 
-<h1>Carrito</h1>
-
 <table border=1>
 	<tr>
 		<td width="800" height="200" >
@@ -16,12 +14,11 @@
 <%= label_tag(:entrega_Exp, "Express") %>
 <%= radio_button_tag(:entrega, 2) %>
 <%= label_tag(:entrega_Restaurante, "Restaurante") %>
-<br>
 
 
- <button name="button" type="submit">
-     <strong>Pagar</strong>
- </button>
-<p>Proceder a Pagar</p>
-<%= link_to 'Atras', restaurantes_selRestaurante_path %>
+<%= link_to 'Atras',restaurantes_selRestaurante_path,class: 'btn'%>
+<%= button_to 'Pagar',:class => 'btn' %>
+
+
+
 

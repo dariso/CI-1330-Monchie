@@ -1,16 +1,22 @@
 <%- model_class = ProductosVendido -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1>Producto Agregado a Orden</h1>
 </div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nombre) %>:</strong></dt>
+  <dd><%= @productos_vendido.producto.nombre %></dd>
+</dl>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:cantidad) %>:</strong></dt>
   <dd><%= @productos_vendido.cantidad %></dd>
 </dl>
 
-
-<%= link_to 'Edit', edit_productos_vendido_path(@productos_vendido) %> |
-
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:especificaciones) %>:</strong></dt>
+  <dd><%= @productos_vendido.especificaciones %></dd>
+</dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

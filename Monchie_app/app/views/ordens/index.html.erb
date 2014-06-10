@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:fecha) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:usuario_cliente_id) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -15,8 +15,9 @@
     <% @ordens.each do |orden| %>
       <tr>
         <td><%= link_to orden.id, orden_path(orden) %></td>
-        <td><%= orden.fecha %></td>
         <td><%=l orden.created_at %></td>
+        <td><%= orden.usuario_cliente_id %></td>
+
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_orden_path(orden), :class => 'btn btn-mini' %>

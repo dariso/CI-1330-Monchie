@@ -1,6 +1,11 @@
 <%- model_class = ProductosVendido -%>
 <div class="page-header">
-  <h1>Indique la Cantidad deseada</h1>
+
+  <h1><%= @productos_vendido.producto.nombre%></h1>
+  <h1> Precio: ¢<%=@productos_vendido.producto.precio%></h1>
+
 </div>
+
+
 
 <%= render 'form' %>

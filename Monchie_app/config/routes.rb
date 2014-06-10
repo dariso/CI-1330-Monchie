@@ -19,16 +19,19 @@ Rails.application.routes.draw do
   get 'restaurantes/selRestaurante'
 
   get 'productos/selProductos'
-   
+  
+  get 'productos_vendidos/verCarrito' 
   
   resources :productos
   resources :restaurantes
   resources :usuario_clientes
-  resources :productos_vendidos
+  resources :productos_vendidos, shallow: true do
+  resources :productos
+  end
   
+ 
   
-  
-  root :to => "static_pages#home"
+   root :to => "static_pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

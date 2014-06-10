@@ -23,6 +23,7 @@ class RestaurantesController < ApplicationController
   end
 
   def selRestaurante
+    Orden.create!(usuario_cliente_id:UsuarioCliente.first.id)##Temporal, eliminar cuando se haga las cuentas
     @restaurantes = Restaurante.all
   end
 

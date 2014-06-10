@@ -1,12 +1,22 @@
 <%= form_for @productos_vendido, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
+
+
+    <%=  f.hidden_field :producto_id, :value => @productos_vendido.producto_id %>
+    <%=  f.hidden_field :orden_id, :value => @productos_vendido.orden_id %>
+
     <%= f.label :cantidad, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :cantidad, :class => 'text_field' %>
     </div>
   </div>
 
-  <div class="form-actions">
+    <%= f.label :especificaciones, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :especificaciones, :class => 'text_field' %>
+    </div>
+
+<div class="form-actions">
     <%= f.submit "Agregar", :class => 'btn btn-primary' %>
     <%= link_to "Cancelar",
                 productos_selProductos_path, :class => 'btn' %>

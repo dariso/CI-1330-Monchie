@@ -14,10 +14,11 @@ class ProductosVendidosController < ApplicationController
 
   # GET /productos_vendidos/new
   def new
-   @productos_vendido = ProductosVendido.new
+   @productos_vendido = ProductosVendido.new(params[:producto].permit(:producto_id))
+   @productos_vendido.orden_id = Orden.last!
   end
 
-  # GET /productos_vendidos/1/edit
+   # GET /productos_vendidos/1/edit
   def edit
   end
 
@@ -25,15 +26,11 @@ class ProductosVendidosController < ApplicationController
   # POST /productos_vendidos.json
   def create
     @productos_vendido = ProductosVendido.new(productos_vendido_params)
-
+    @orden = Orden.last
+    @productos_vendido.orden_id = @orden.id
     respond_to do |format|
       if @productos_vendido.save
         format.html { redirect_to @productos_vendido, notice: 'Producto agregado exitosamente al carrito.' }
-        
-        
-        
-        
-        
         format.json { render :show, status: :created, location: @productos_vendido }
       else
         format.html { render :new }
@@ -66,6 +63,11 @@ class ProductosVendidosController < ApplicationController
     end
   end
 
+
+  def verCarrito
+     @productos_vendidos = Orden.last.productos_vendidos
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_productos_vendido
@@ -74,6 +76,6 @@ class ProductosVendidosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def productos_vendido_params
-      params.require(:productos_vendido).permit(:cantidad,:orden_id,:producto_id)
+      params.require(:productos_vendido).permit(:cantidad,:orden_id,:producto_id,:especificaciones)
     end
 end

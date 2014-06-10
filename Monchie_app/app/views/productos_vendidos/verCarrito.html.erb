@@ -1,26 +1,23 @@
 <%- model_class = ProductosVendido -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Carrito</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:cantidad) %></th>
       <th><%= model_class.human_attribute_name(:especificaciones) %></th>
- <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @productos_vendidos.each do |productos_vendido| %>
       <tr>
-        <td><%= link_to productos_vendido.id, productos_vendido_path(productos_vendido) %></td>
         <td><%= productos_vendido.producto.nombre %></td>
         <td><%= productos_vendido.cantidad %></td>
-        <td><%= productos_vendido.especificaciones %></td>
-        <td><%= productos_vendido.created_at %></td>
+        <td><%= show_non_blank_field productos_vendido.especificaciones %></td>
+
 
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -32,10 +29,15 @@
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
+  <tfoot>
+  <tr>
+    <td><%= link_to t('.back', :default => t("helpers.links.back")),
+                productos_selProductos_path, :class => 'btn'  %></td>
+  </tr>
+  </tfoot>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_productos_vendido_path,
-            :class => 'btn btn-primary' %>
+
+

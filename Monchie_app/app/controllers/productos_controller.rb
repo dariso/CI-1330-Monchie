@@ -25,7 +25,7 @@ class ProductosController < ApplicationController
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-    @producto.restaurante_id = Restaurante.find(1).id
+    @producto.restaurante_id = Restaurante.first!
 
 
 
