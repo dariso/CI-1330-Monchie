@@ -1,19 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html>
-<head>
-  <title>MonchieApp</title>
-   <%= stylesheet_link_tag "application", media: "all" %>
-  <%= javascript_include_tag "application"%>
-  <%= csrf_meta_tags %>
-</head>
-<body >
-
-<%= yield %>
-
-</body>
-</html> 
-=======
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -61,12 +46,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">MonchieApp</a>
+          <a class="brand" href="/"><%= image_tag 'logo.jpg', alt: 'MonchieApp', width: '120', height: '60' %></a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Restaurantes", restaurantes_path %></li>
+              <li><%= link_to "Usuarios", usuario_clientes_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -93,11 +77,10 @@
         </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2014</p>
+        <p>&copy; Monchie Inc. 2014</p>
       </footer>
 
     </div> <!-- /container -->
 
   </body>
 </html>
->>>>>>> c2ef49fef1ed4b87ae95f9538d905a4a46fdd291

@@ -5,9 +5,7 @@
   <thead>
   <tr>
     <th>Nombre</th>
-     <!--
     <th>Telefono</th>
-      -->
     <th>Distrito</th>
     <th>Direccion</th>
     <th colspan="3"></th>
@@ -17,10 +15,14 @@
   <tbody>
   <% @restaurantes.each do |restaurante| %>
       <tr>
-        <td id = "texto"><%= link_to restaurante.nombre, carrito_index_path, :class => 'btn'%></td>
+        <td id = "texto"><%= link_to restaurante.nombre, carrito_index_path%></td>
+<<<<<<< HEAD
         <!--
         <td><%#restaurante.telefono %></td>
         -->
+=======
+        <td id = "texto"><%=  restaurante.telefonos.first.telefono %></td>
+>>>>>>> e2ce8b7aec7c1718a7bf64b0276e6dbcd1bcac95
         <td id = "texto"><%= restaurante.distrito %></td>
         <td id = "texto"><%= restaurante.direccion %></td>
       </tr>

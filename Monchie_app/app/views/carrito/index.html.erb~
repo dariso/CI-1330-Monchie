@@ -3,9 +3,14 @@
 
 <table border=1>
 	<tr>
-		<td width="800" height="200" >
+<<<<<<< HEAD
+		<td width="800" height="300" >
 		
         <iframe src=<%=productos_selProductos_path%> name="menu" width="800" height="300" " ></iframe>
+=======
+		<td width="800" height="200" >
+		<iframe src=<%=productos_selProductos_path%> name="menu" width="800" height="300" " ></iframe>
+>>>>>>> e2ce8b7aec7c1718a7bf64b0276e6dbcd1bcac95
 		</td>
 
 	</tr>

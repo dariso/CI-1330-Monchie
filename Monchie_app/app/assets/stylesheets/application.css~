@@ -15,12 +15,16 @@
  */
 body{
 
-background-color:#18BDC3;
-color: white;
+background-color:white;
+color: #8A2908;
 
 }
 
 #sidebar{
 color: #848484;
+}
+
+#texto{
+ color: #BDBDBD;
 }
 
