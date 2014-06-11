@@ -37,7 +37,8 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -51,6 +52,15 @@
             <ul class="nav">
               <li><%= link_to "Restaurantes", restaurantes_path %></li>
               <li><%= link_to "Usuarios", usuario_clientes_path  %></li>
+	      <% if user_signed_in? %>
+			<li><%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %></li>
+			<li><%= link_to "Entrar como Cliente", restaurantes_selRestaurante_path,:class => 'btn' %></li>
+		  <%else%>
+			<li><%= link_to "Registrarse", new_user_registration_path %></li>
+	
+			<li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
+                  <%end%>
+	      
             </ul>
           </div><!--/.nav-collapse -->
         </div>
