@@ -36,6 +36,9 @@ body{ padding-top: 160px;}
    }
 }
 
-.link_to{
-  color: white;
+#withLibre .link{
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
 }
+

@@ -1,18 +1,23 @@
 <%- model_class = ProductosVendido -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+  <h1>Producto Agregado a Orden</h1>
 </div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nombre) %>:</strong></dt>
+  <dd><%= @productos_vendido.producto.nombre %></dd>
+</dl>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:cantidad) %>:</strong></dt>
   <dd><%= @productos_vendido.cantidad %></dd>
 </dl>
 
-<<<<<<< HEAD
-<%= link_to 'Edit', edit_productos_vendido_path(@productos_vendido) %> |
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:especificaciones) %>:</strong></dt>
+  <dd><%= @productos_vendido.especificaciones %></dd>
+</dl>
 
-<%= link_to 'Back', productos_selProductos_path %>
-=======
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               productos_selProductos_path, :class => 'btn'  %>
@@ -24,4 +29,4 @@
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
 </div>
->>>>>>> c2ef49fef1ed4b87ae95f9538d905a4a46fdd291
+
