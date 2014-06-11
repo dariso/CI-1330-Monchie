@@ -1,4 +1,13 @@
 <h1>Bienvenido a Monchie!</h1>
-<p><%= link_to "Entrar como Dependiente", productos_path %></p>
-<p><%= link_to "Entrar como Cliente", restaurantes_selRestaurante_path %></p>
+
+<h4>Iniciar seción</h4>
+<form>
+Email: <input type="text" name="email">
+</form> 
+<form>
+Password: <input type="password" name="password">
+</form>
+
+<p><%= link_to "Entrar como Dependiente", productos_path,:class => 'btn' %></p>
+<p><%= link_to "Entrar como Cliente", restaurantes_selRestaurante_path,:class => 'btn' %></p>
 
