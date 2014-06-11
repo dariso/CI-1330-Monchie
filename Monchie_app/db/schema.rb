@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610071516) do
+
+ActiveRecord::Schema.define(version: 20140611025043) do
+
 
   create_table "cuenta_usuarios", force: true do |t|
     t.string   "usuario"
@@ -84,6 +86,9 @@ ActiveRecord::Schema.define(version: 20140610071516) do
     t.string   "direccion"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provincia"
+    t.string   "canton"
+    t.string   "distrito"
   end
 
 end
