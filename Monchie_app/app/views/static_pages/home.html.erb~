@@ -1,6 +1,6 @@
 <h1>Bienvenido a Monchie!</h1>
 
-<h4>Iniciar seción</h4>
+<h4>Iniciar sesión</h4>
 <form>
 Email: <input type="text" name="email">
 </form> 
