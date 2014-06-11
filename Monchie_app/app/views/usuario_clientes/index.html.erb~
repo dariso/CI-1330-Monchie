@@ -10,7 +10,6 @@
       <th><%= model_class.human_attribute_name(:apellidos) %></th>
       <th><%= model_class.human_attribute_name(:provincia) %></th>
       <th><%= model_class.human_attribute_name(:canton) %></th>
-      <th><%= model_class.human_attribute_name(:distrito) %></th>
       <th><%= model_class.human_attribute_name(:direccion) %></th>
       <th><%= model_class.human_attribute_name(:telefono) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
@@ -26,7 +25,6 @@
         <td><%= usuario_cliente.apellidos %></td>
         <td><%= usuario_cliente.provincia %></td>
         <td><%= usuario_cliente.canton %></td>
-        <td><%= usuario_cliente.distrito %></td>
         <td><%= usuario_cliente.direccion %></td>
         <td><%= usuario_cliente.telefonos.first.telefono %></td>
         <td><%= usuario_cliente.emails.first.email %></td>

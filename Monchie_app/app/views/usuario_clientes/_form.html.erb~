@@ -5,14 +5,13 @@
       <%= f.text_field :nombre, :class => 'text_field' %>
     </div>
   </div>
-  
   <div class="control-group">
     <%= f.label :apellidos, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :apellidos, :class => 'text_field' %>
     </div>
-  </div>
-     
+    
+     </div>
   <div class="control-group">
     <%= f.label :provincia, :class => 'control-label' %>
     <div class="controls">
@@ -20,7 +19,7 @@
     </div>
   </div>
   
-     
+      </div>
   <div class="control-group">
     <%= f.label :canton, :class => 'control-label' %>
     <div class="controls">
@@ -28,7 +27,7 @@
     </div>
   </div>
   
-  
+      </div>
   <div class="control-group">
     <%= f.label :distrito, :class => 'control-label' %>
     <div class="controls">
@@ -36,7 +35,7 @@
     </div>
   </div>
     
-  <div class="control-group">
+ <div class="control-group">
     <%= f.label :direccion, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :direccion, :class => 'text_area', :cols => 5, :rows => 10 %>
