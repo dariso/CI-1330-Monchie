@@ -42,7 +42,7 @@ class OrdensController < ApplicationController
   def update
     respond_to do |format|
       if @orden.update(orden_params)
-        format.html { redirect_to @orden, notice: 'Orden was successfully updated.' }
+        format.html { redirect_to productos_selProductos_path }
         format.json { render :show, status: :ok, location: @orden }
       else
         format.html { render :edit }
@@ -59,6 +59,10 @@ class OrdensController < ApplicationController
       format.html { redirect_to ordens_url }
       format.json { head :no_content }
     end
+  end
+
+  def cambioModoRetiro
+    @orden = Orden.last!
   end
 
   private

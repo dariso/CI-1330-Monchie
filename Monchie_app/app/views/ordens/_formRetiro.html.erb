@@ -1,0 +1,16 @@
+<%= form_for @orden,:html => { :class => 'form-horizontal' } do |f| %>
+
+    <div class="field">
+    <%= f.radio_button(:modoretiro,"Express") %>
+    <%= f.label(:modoretiro, "Express") %>
+    <%= f.radio_button(:modoretiro, "En Restaurante") %>
+    <%= f.label(:modoretiro, "En Restaurante") %>
+    </div>
+
+
+    <div class="form-actions">
+    <%= f.submit "Actualizar" %>
+    <%= link_to 'Cancelar', productos_selProductos_path,:class => 'btn' %>
+    </div>
+
+<% end %>
