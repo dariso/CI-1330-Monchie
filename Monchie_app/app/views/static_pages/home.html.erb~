@@ -12,10 +12,13 @@ Password: <input type="password" name="password">
 <% if user_signed_in? %>
 	<%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %>
 	<p><%= link_to "Entrar como Cliente", restaurantes_selRestaurante_path,:class => 'btn' %></p>
+<<<<<<< HEAD
 <%else%>
 	<%= link_to "Registrarse", new_user_registration_path %>
 	<br/>
 	<%= link_to "Iniciar Sesión", new_user_session_path %>
+=======
+>>>>>>> 7ded83e6349833f2fde6a58c7e0006adaa02abc7
 <%end%>
 <p><%= link_to "Entrar como Dependiente", productos_path,:class => 'btn' %></p>
 

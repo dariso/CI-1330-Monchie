@@ -2,7 +2,7 @@
 <table border=1>
 	<tr>
 		<td width="800" height="200" >
-		<iframe src=<%=productos_selProductos_path%> name="menu" width="800" height="300" " ></iframe>
+		<iframe src=<%=productos_selProductos_path%> width="850" height="500"></iframe>
 		</td>
 
 	</tr>
@@ -10,14 +10,8 @@
 </table>
 
 
-<%= radio_button_tag(:entrega, 1) %>
-<%= label_tag(:entrega_Exp, "Express") %>
-<%= radio_button_tag(:entrega, 2) %>
-<%= label_tag(:entrega_Restaurante, "Restaurante") %>
-
-
 <%= link_to 'Atras',restaurantes_selRestaurante_path,class: 'btn'%>
-<%= button_to 'Pagar',:class => 'btn' %>
+<%= link_to 'Pagar', static_pages_home_path,:class => 'btn' %>
 
 
 

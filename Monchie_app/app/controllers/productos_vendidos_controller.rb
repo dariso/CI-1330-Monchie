@@ -58,7 +58,7 @@ class ProductosVendidosController < ApplicationController
   def destroy
     @productos_vendido.destroy
     respond_to do |format|
-      format.html { redirect_to productos_vendidos_url }
+      format.html { redirect_to productos_vendidos_verCarrito_path }
       format.json { head :no_content }
     end
   end

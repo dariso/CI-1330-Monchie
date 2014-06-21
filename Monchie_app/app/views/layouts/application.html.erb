@@ -50,8 +50,14 @@
           <a class="brand" href="/"><%= image_tag 'banner.jpg', alt: 'MonchieApp', width: '240', height: '120' %></a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Restaurantes", restaurantes_path %></li>
-              <li><%= link_to "Usuarios", usuario_clientes_path  %></li>
+          <% if user_signed_in? %>
+			<li><%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %></li>
+		  <%else%>
+			<li><%= link_to "Registrarse", new_user_registration_path %></li>
+	
+			<li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
+                  <%end%>
+	      
             </ul>
           </div><!--/.nav-collapse -->
         </div>

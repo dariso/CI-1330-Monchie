@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
   devise_for :users
+<<<<<<< HEAD
   resources :estados
 
   resources :ordens
+=======
+>>>>>>> 7ded83e6349833f2fde6a58c7e0006adaa02abc7
 
   get 'carrito/index'
 
@@ -19,13 +22,13 @@ Rails.application.routes.draw do
 
   get 'productos/selProductos'
   
-  get 'productos_vendidos/verCarrito' 
+  get 'productos_vendidos/verCarrito'
+
+  get 'ordens/cambioModoRetiro'
   
-  resources :productos
-  resources :restaurantes
-  resources :usuario_clientes
+  resources :productos,:restaurantes,:usuario_clientes,:cuenta_usuarios,:estados,:ordens
   resources :productos_vendidos, shallow: true do
-  resources :productos
+    resources :productos
   end
   
  
