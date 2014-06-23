@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :cuenta_usuarios
+  devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
 
   resources :estados
 
   resources :ordens
+
 
   get 'carrito/index'
 
@@ -15,15 +16,23 @@ Rails.application.routes.draw do
   get 'static_pages/help'
 
   get 'static_pages/about'
+  
 
   get 'restaurantes/selRestaurante'
 
   get 'productos/selProductos'
-  resources :productos
-  resources :restaurantes
-  resources :usuario_clientes
-  resources :productos_vendidos
-  root 'static_pages#home'
+  
+  get 'productos_vendidos/verCarrito'
+
+  get 'ordens/cambioModoRetiro'
+
+  resources :productos,:restaurantes,:usuario_clientes,:cuenta_usuarios,:estados,:ordens
+  resources :productos_vendidos, shallow: true do
+    resources :productos
+  end
+  
+ 
+   root :to => "static_pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

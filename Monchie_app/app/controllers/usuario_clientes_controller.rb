@@ -14,8 +14,11 @@ class UsuarioClientesController < ApplicationController
 
   # GET /usuario_clientes/new
   def new
-    @usuario_cliente = UsuarioCliente.new
-	@usuario_cliente.with_blank_infoContacto
+   @usuario_cliente = UsuarioCliente.new
+   #@usuario_cliente = UsuarioCliente.where(user_id: "current_user")
+   @usuario_cliente.with_blank_infoContacto
+    
+
   end
 
   # GET /usuario_clientes/1/edit

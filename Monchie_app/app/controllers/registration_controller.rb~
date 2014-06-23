@@ -1,0 +1,13 @@
+class RegistrationController < ApplicationController
+	
+	
+	def create
+	super
+	if resource.save
+	@usuariocliente=UsuarioCliente.new
+	@usuariocliente.user_id=resource.id
+	@usuariocliente.save
+	end
+	end
+	
+end

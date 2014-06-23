@@ -1,6 +1,6 @@
 class UsuarioCliente < ActiveRecord::Base
 	has_many :ordens
-	has_one :cuenta_usuario
+
 	has_one :user
 	has_many :telefonos, as: :telefonable, dependent: :destroy
 	has_many :emails, as: :emailable, dependent: :destroy

@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-<<<<<<< HEAD
+  devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
+
   resources :estados
 
   resources :ordens
-=======
->>>>>>> 7ded83e6349833f2fde6a58c7e0006adaa02abc7
+
 
   get 'carrito/index'
 
@@ -17,6 +16,7 @@ Rails.application.routes.draw do
   get 'static_pages/help'
 
   get 'static_pages/about'
+  
 
   get 'restaurantes/selRestaurante'
 
@@ -25,14 +25,13 @@ Rails.application.routes.draw do
   get 'productos_vendidos/verCarrito'
 
   get 'ordens/cambioModoRetiro'
-  
+
   resources :productos,:restaurantes,:usuario_clientes,:cuenta_usuarios,:estados,:ordens
   resources :productos_vendidos, shallow: true do
     resources :productos
   end
   
  
-  
    root :to => "static_pages#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
