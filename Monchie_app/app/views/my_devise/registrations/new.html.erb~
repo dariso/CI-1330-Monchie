@@ -1,62 +1,31 @@
 <h2>Sign up</h2>
 
-<%= form_tag(user_registration_path,:method => 'post') %>
-<%= devise_error_messages! %>
-  <table>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div>
+  <%= f.label :username %><br/>
+  <%= f.text_field :username %>
+  </div>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true %></div>
+
+  <div><%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off" %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+    <%= link_to "Información personal", edit_usuario_cliente_path(current_user),:class => 'btn' %>
+
+  <div>
   
-      <tr>
-      <td>Username : </td>
-      <td><%=text_field_tag "user[username]",@user.username %></td>
-      </tr>
+  <%= f.submit "Sign up" %>
+  
+  </div>
+  	
+<% end %>
 
-      <tr>
-      <td>Email : </td>
-      <td><%=email_field_tag "user[email]",@user.email %></td>
-      </tr>
-
-      <tr>
-      <td>Password : </td>
-      <td><%=password_field_tag "user[password]",@user.password %></td>
-      </tr>
-
-      <tr>
-      <td>Retype password : </td>
-      <td><%=password_field_tag "user[password_confirmation]",@user.password_confirmation %></td>
-      </tr>
-
-      <tr>
-      <td>Nombre : </td>
-      <td><%=text_field_tag "usuariocliente[nombre]" ,@usuariocliente.nombre %></td>
-      </tr>
- 	<tr>
-      <td>Apellidos : </td>
-      <td><%=text_field_tag "usuariocliente[apellidos]" ,@usuariocliente.apellidos %></td>
-      </tr>
-    
-       <tr>
-      <td>Provincia : </td>
-      <td><%=text_field_tag "usuariocliente[provincia]" ,@usuariocliente.provincia %></td>
-      </tr>
-       <tr>
-      <td>Canton : </td>
-      <td><%=text_field_tag "usuariocliente[canton]" ,@usuariocliente.canton %></td>
-      </tr>
-       <tr>
-      <td>Distrito : </td>
-      <td><%=text_field_tag "usuariocliente[distrito]" ,@usuariocliente.distrito %></td>
-      </tr>
-      <tr>
-      <td>Direccion : </td>
-      <td>
- <%=text_area_tag "usuariocliente[direccion]" ,@usuariocliente.direccion, :rows => 10, :cols => 5 %></td>
-      </tr>
-      
-     
-
-      <tr>
-      <td><%= submit_tag nil, :class => "form_submit" %></td>
-    </tr>
-  </table>
 
 <%= render "devise/shared/links" %>
+
 

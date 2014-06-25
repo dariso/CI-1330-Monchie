@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
-
+  devise_for :users
   resources :estados
 
   resources :ordens

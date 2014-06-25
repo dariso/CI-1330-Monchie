@@ -1,11 +1,6 @@
 class MyDevise::RegistrationsController < Devise::RegistrationsController
 
-	def new
-	super
-		if resource.save
-	
-		end
-	end
+
 	
 	def create
 	super
@@ -15,11 +10,14 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
 		@usuariocliente=UsuarioCliente.new
 		@usuariocliente.user_id=resource.id
 		@usuariocliente.save
-		redirect_to new_usuario_cliente_path
-		else
-		render :action => "new"
+		
+		
 		end
 		
+	end
+	
+	def after_sign_up_path_for (resource)
+	 edit_usuario_cliente_path(resource.id)
 	end
 
 end
