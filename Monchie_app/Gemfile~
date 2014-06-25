@@ -5,8 +5,9 @@ gem 'therubyracer', :platform => :ruby
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'devise'
+
 group :development, :test do 
-	gem 'rspec-rails'
+  gem 'rspec-rails'
   gem 'sqlite3'
 end
 
@@ -52,10 +53,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
-
 require 'rbconfig'
-gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+
 
 
 
