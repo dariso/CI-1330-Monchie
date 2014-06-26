@@ -9,10 +9,9 @@ class UsuarioCliente < ActiveRecord::Base
                                   attrs.all? { |key, value| value.blank? }
                                 },
                                 allow_destroy:true
-								
+		##Devise guarda email???
     def with_blank_infoContacto
 		2.times{ telefonos.build }
-		emails.build
-		self
+	  self
 	end
 end
