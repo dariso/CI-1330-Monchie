@@ -26,11 +26,13 @@ Rails.application.routes.draw do
 
   get 'ordens/cambioModoRetiro'
 
-  resources :productos,:restaurantes,:usuario_clientes,:cuenta_usuarios,:estados,:ordens
+  resources :productos,:restaurantes,:usuario_clientes,:estados,:ordens
   resources :productos_vendidos, shallow: true do
     resources :productos
   end
-  
+  resources :users, shallow: true do
+    resources :usuario_clientes
+  end
  
    root :to => "static_pages#home"
 

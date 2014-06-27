@@ -13,7 +13,7 @@
       <th><%= model_class.human_attribute_name(:distrito) %></th>
       <th><%= model_class.human_attribute_name(:direccion) %></th>
       <th><%= model_class.human_attribute_name(:telefono) %></th>
-      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:user_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -28,8 +28,8 @@
         <td><%= usuario_cliente.canton %></td>
         <td><%= usuario_cliente.distrito %></td>
         <td><%= usuario_cliente.direccion %></td>
-        <td><%= usuario_cliente.telefonos.first.telefono %></td>
-        <td><%= usuario_cliente.emails.first.email %></td>
+        <td><%= usuario_cliente.telefonos.first.telefono unless usuario_cliente.telefonos.first.telefono.blank? %></td>
+        <td><%= usuario_cliente.user_id %>
         <td><%=l usuario_cliente.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

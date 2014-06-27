@@ -7,6 +7,18 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails Monchie_app: test" uuid="52c5ddbf-556a-4fda-80cc-7448d0f9fc85">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:monchie_database_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails Monchie_app: production" uuid="b2ea7c2e-f9e9-453c-912e-eb72849830f9">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:monchie_database_production</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 

@@ -14,11 +14,8 @@ class UsuarioClientesController < ApplicationController
 
   # GET /usuario_clientes/new
   def new
-   @usuario_cliente = UsuarioCliente.new
-   #@usuario_cliente = UsuarioCliente.where(user_id: "current_user")
-   @usuario_cliente.with_blank_infoContacto
-    
-
+     @usuario_cliente = UsuarioCliente.new(params[:user].permit(:user_id))
+     @usuario_cliente.with_blank_infoContacto
   end
 
   # GET /usuario_clientes/1/edit
@@ -32,7 +29,7 @@ class UsuarioClientesController < ApplicationController
 
     respond_to do |format|
       if @usuario_cliente.save
-        format.html { redirect_to @usuario_cliente, notice: 'Usuario cliente was successfully created.' }
+        format.html { redirect_to static_pages_home_path }
         format.json { render :show, status: :created, location: @usuario_cliente }
       else
         format.html { render :new }
@@ -74,6 +71,6 @@ class UsuarioClientesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def usuario_cliente_params
-      params.require(:usuario_cliente).permit(:nombre,:apellidos,:provincia,:canton,:distrito,:direccion,telefonos_attributes:[:telefono,:id],emails_attributes:[:email,:id])
+      params.require(:usuario_cliente).permit(:nombre,:apellidos,:provincia,:canton,:distrito,:direccion,:user_id,telefonos_attributes:[:telefono,:id])
     end
 end
