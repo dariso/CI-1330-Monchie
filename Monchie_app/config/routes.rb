@@ -2,11 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
 
-  resources :estados
-
-  resources :ordens
-
-
   get 'carrito/index'
 
   get 'carrito/pagoOrden'	
@@ -25,6 +20,8 @@ Rails.application.routes.draw do
   get 'productos_vendidos/verCarrito'
 
   get 'ordens/cambioModoRetiro'
+
+  get 'ordens/finalizarOrden'
 
   resources :productos,:restaurantes,:usuario_clientes,:estados,:ordens
   resources :productos_vendidos, shallow: true do

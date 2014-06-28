@@ -62,7 +62,14 @@ class OrdensController < ApplicationController
   end
 
   def cambioModoRetiro
-    @orden = Orden.last!
+    @orden = Orden.where(user_id:current_user.id).last
+  end
+
+  def finalizarOrden
+    @orden = Orden.where(user_id:current_user.id).last
+    @orden.update(estado:"Finalizada")
+    @orden.save!
+    redirect_to static_pages_home_path
   end
 
   private
@@ -73,6 +80,6 @@ class OrdensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def orden_params
-      params.require(:orden).permit(:usuario_cliente_id,:modoretiro)
+      params.require(:orden).permit(:modoretiro,:estado)
     end
 end

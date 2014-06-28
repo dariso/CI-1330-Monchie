@@ -1,7 +1,6 @@
 class UsuarioCliente < ActiveRecord::Base
-	has_many :ordens
 
-	has_one :user
+  belongs_to :user
 	has_many :telefonos, as: :telefonable, dependent: :destroy
 	has_many :emails, as: :emailable, dependent: :destroy
 	accepts_nested_attributes_for :telefonos,:emails,

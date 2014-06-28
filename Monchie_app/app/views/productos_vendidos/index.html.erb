@@ -9,7 +9,8 @@
       <th><%= model_class.human_attribute_name(:nombre) %></th>
       <th><%= model_class.human_attribute_name(:cantidad) %></th>
       <th><%= model_class.human_attribute_name(:especificaciones) %></th>
- <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:orden_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
         <td><%= productos_vendido.producto.nombre %></td>
         <td><%= productos_vendido.cantidad %></td>
         <td><%= productos_vendido.especificaciones %></td>
+        <td><%= productos_vendido.orden_id %></td>
         <td><%= productos_vendido.created_at %></td>
 
         <td>

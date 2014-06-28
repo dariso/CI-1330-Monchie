@@ -4,14 +4,32 @@
 </div>
 
 
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:nombre) %></th>
+      <th><%= model_class.human_attribute_name(:cantidad) %></th>
+      <th><%= model_class.human_attribute_name(:especificaciones) %></th>
+   </tr>
+   </thead>
+
+    <tbody>
+
+            <% @orden.productos_vendidos.each do |productovendido| %>
+            <tr>
+                <td><%= productovendido.producto.nombre %></td>
+                <td><%= productovendido.cantidad %></td>
+                <td><%= productovendido.especificaciones %></td>
+            </tr>
+            <% end %>
+
+
+    </tbody>
+
+</table>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               ordens_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_orden_path(@orden), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              orden_path(@orden),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
 </div>

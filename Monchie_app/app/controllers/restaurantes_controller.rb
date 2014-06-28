@@ -23,7 +23,13 @@ class RestaurantesController < ApplicationController
   end
 
   def selRestaurante
-    Orden.create!(usuario_cliente_id:UsuarioCliente.first.id,modoretiro:"Express")##Temporal, eliminar cuando se haga las cuentas
+    if Orden.where(user_id:current_user.id).last.present?
+      if Orden.where(user_id:current_user.id).last.estado != "Activa"
+      Orden.create!(user_id:current_user.id,modoretiro:"Express",estado:"Activa")###Sistema de estados no esta con el modelo estado
+      end
+    else
+      Orden.create!(user_id:current_user.id,modoretiro:"Express",estado:"Activa")
+    end
     @restaurantes = Restaurante.all
   end
 

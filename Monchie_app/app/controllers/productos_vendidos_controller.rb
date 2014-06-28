@@ -15,7 +15,6 @@ class ProductosVendidosController < ApplicationController
   # GET /productos_vendidos/new
   def new
    @productos_vendido = ProductosVendido.new(params[:producto].permit(:producto_id))
-   @productos_vendido.orden_id = Orden.last!
   end
 
    # GET /productos_vendidos/1/edit
@@ -26,8 +25,7 @@ class ProductosVendidosController < ApplicationController
   # POST /productos_vendidos.json
   def create
     @productos_vendido = ProductosVendido.new(productos_vendido_params)
-    @orden = Orden.last
-    @productos_vendido.orden_id = @orden.id
+    @productos_vendido.orden_id = Orden.where(user_id:current_user.id).last.id###
     respond_to do |format|
       if @productos_vendido.save
         format.html { redirect_to @productos_vendido, notice: 'Producto agregado exitosamente al carrito.' }
@@ -65,7 +63,7 @@ class ProductosVendidosController < ApplicationController
 
 
   def verCarrito
-     @productos_vendidos = Orden.last.productos_vendidos
+     @productos_vendidos = Orden.where(user_id:current_user.id).last.productos_vendidos
   end
 
   private

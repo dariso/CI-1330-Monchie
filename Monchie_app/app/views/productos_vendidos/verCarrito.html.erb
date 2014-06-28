@@ -12,6 +12,7 @@
     </tr>
   </thead>
   <tbody>
+    <%if @productos_vendidos.present?%>
     <% @productos_vendidos.each do |productos_vendido| %>
       <tr>
         <td><%= productos_vendido.producto.nombre %></td>
@@ -29,7 +30,10 @@
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
-  <% end %>
+    <%end%>
+    <%end%>
+
+
   </tbody>
   <tfoot>
   <tr>
