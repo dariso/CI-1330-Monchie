@@ -5,4 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatables
   has_one :usuario_cliente
   has_many :ordens
+
+  
+  belongs_to :role
+  before_create :set_default_role
+  
+  private
+  def set_default_role 
+  	self.role ||= Role.find_by_name('registered')
+  end
+  
+
 end

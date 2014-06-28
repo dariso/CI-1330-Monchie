@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'ordens/finalizarOrden'
 
-  resources :productos,:restaurantes,:usuario_clientes,:estados,:ordens
+  resources :productos,:restaurantes,:usuario_clientes,:estados,:ordens,:facturas
   resources :productos_vendidos, shallow: true do
     resources :productos
   end
