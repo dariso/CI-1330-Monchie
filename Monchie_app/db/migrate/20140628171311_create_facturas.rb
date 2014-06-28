@@ -1,9 +1,8 @@
 class CreateFacturas < ActiveRecord::Migration
   def change
     create_table :facturas do |t|
-      t.orden_id :integer
-      t.total :integer
-
+      t.integer :total
+      t.references :orden
       t.timestamps
     end
   end

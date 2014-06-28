@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :facturas
+
   devise_for :users, :controllers => {:registrations => "my_devise/registrations"}
 
   get 'carrito/index'

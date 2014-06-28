@@ -69,6 +69,6 @@ class FacturasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def factura_params
-      params.require(:factura).permit(:integer, :integer)
+      params.require(:factura).permit(:total)
     end
 end
