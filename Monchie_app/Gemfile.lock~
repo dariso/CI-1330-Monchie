@@ -173,11 +173,8 @@ DEPENDENCIES
   less-rails
   pg
   rails (= 4.1.0)
-<<<<<<< HEAD
-  role_model
-=======
   rails_12factor
->>>>>>> e614008e857025fa73238edb160ff041c2d99731
+  role_model
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

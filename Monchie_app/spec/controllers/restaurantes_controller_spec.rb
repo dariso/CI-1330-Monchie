@@ -24,7 +24,7 @@ RSpec.describe RestaurantesController, :type => :controller do
   # Restaurante. As you add validations to Restaurante, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("nombre" => "MyString","provincia" => "MyString","canton" => "MyString","distrito" => "MyString","direccion" => "MyString")
+    skip("Add a hash of attributes valid for your model")
   }
 
   let(:invalid_attributes) {

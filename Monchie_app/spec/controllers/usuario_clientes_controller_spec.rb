@@ -24,7 +24,7 @@ RSpec.describe UsuarioClientesController, :type => :controller do
   # UsuarioCliente. As you add validations to UsuarioCliente, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("nombre" => "MyString","apellidos" => "MyString","provincia" => "MyString","canton" => "MyString","distrito" => "MyString")
+    skip("Add a hash of attributes valid for your model")
   }
 
   let(:invalid_attributes) {
