@@ -5,12 +5,10 @@ gem 'therubyracer'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'devise'
-<<<<<<< HEAD
+
 gem "cancan"
 gem "role_model"
-=======
 
->>>>>>> e614008e857025fa73238edb160ff041c2d99731
 group :development, :test do 
   gem 'rspec-rails'
   gem 'sqlite3'

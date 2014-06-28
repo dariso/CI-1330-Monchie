@@ -1,0 +1,27 @@
+<h1>Listing facturas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Integer</th>
+      <th>Integer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facturas.each do |factura| %>
+      <tr>
+        <td><%= factura.integer %></td>
+        <td><%= factura.integer %></td>
+        <td><%= link_to 'Show', factura %></td>
+        <td><%= link_to 'Edit', edit_factura_path(factura) %></td>
+        <td><%= link_to 'Destroy', factura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Factura', new_factura_path %>
