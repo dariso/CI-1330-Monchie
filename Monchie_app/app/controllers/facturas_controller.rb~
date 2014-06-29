@@ -10,12 +10,12 @@ class FacturasController < ApplicationController
   # GET /facturas/1
   # GET /facturas/1.json
   def show
-        tot = 0
         @productos_vendidos = Orden.where(user_id:current_user.id).last.productos_vendidos
         @productos_vendidos.each do |producto|
+          tot = 0
           tot += Producto.find(producto.producto_id).precio * producto.cantidad
+	  @factura.update(total:tot)
         end
-	@factura.update(total:tot)
   end
 
   # GET /facturas/new

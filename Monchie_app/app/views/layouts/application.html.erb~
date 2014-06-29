@@ -52,7 +52,7 @@
             <ul class="nav">
           <% if user_signed_in? %>
 			<li><%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %></li>
-			<%=current_user%>
+			<%=current_user.id%>
 		  <%else%>
 			<li><%= link_to "Registrarse", new_user_registration_path %></li>
 	

@@ -15,11 +15,13 @@
   <tbody>
     <% @facturas.each do |factura| %>
       <tr>
-        <td><%= factura.id %></td>
+        <td><%= factura.id, factura_path(factura) %></td>
         <td><%= factura.total %></td>
         <td><%= factura.orden_id %></td>
         <td><%=l factura.created_at %></td>
         <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_factura_path(factura), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       factura_path(factura),
                       :method => :delete,

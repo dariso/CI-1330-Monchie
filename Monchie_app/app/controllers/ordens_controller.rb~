@@ -69,7 +69,7 @@ class OrdensController < ApplicationController
     @orden = Orden.where(user_id:current_user.id).last
     @orden.update(estado:"Finalizada")
     @orden.save!
-    @factura = Factura.create!(orden_id:@orden.id)
+    @factura = Factura.create!(orden_id:@orden.id, total:0)
     redirect_to @factura
   end
 

@@ -25,7 +25,6 @@
 </table>
 
 <div class="page-header">
-  <h5>Modo de retiro: <%= Orden.find(@factura.orden_id).modoretiro%></h5>
   <h3>Total a pagar: ¢<%= @factura.total%></h3>
 </div>
 
