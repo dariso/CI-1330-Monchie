@@ -9,6 +9,8 @@ gem 'devise'
 gem "cancan"
 gem "role_model"
 
+gem "pdfkit"
+
 group :development, :test do 
   gem 'rspec-rails'
   gem 'sqlite3'

@@ -5,12 +5,10 @@ gem 'therubyracer'
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'devise'
-<<<<<<< HEAD
+
 gem "cancan"
 gem "role_model"
-=======
 
->>>>>>> e614008e857025fa73238edb160ff041c2d99731
 group :development, :test do 
   gem 'rspec-rails'
   gem 'sqlite3'
@@ -23,6 +21,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
+#ruby '2.1.0'
 # Use sqlite3 as the database for Active Record
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
