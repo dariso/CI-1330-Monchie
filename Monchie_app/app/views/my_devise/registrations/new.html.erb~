@@ -19,7 +19,7 @@
   <div>
   
   <%= f.label :role%>
-  <%= f.collection_select :roles, User::ROLES, :to_s, :titleize %>
+  <%= f.collection_select :role, User::ROLES, :to_s, :titleize %>
 
   <%= f.submit "Siguiente" %>
   
