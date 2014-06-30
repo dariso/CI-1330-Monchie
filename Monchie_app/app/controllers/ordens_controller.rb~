@@ -69,8 +69,13 @@ class OrdensController < ApplicationController
     @orden = Orden.where(user_id:current_user.id).last
     @orden.update(estado:"Finalizada")
     @orden.save!
-    @factura = Factura.create!(orden_id:@orden.id, total:0)
-    redirect_to @factura
+    if Factura.where(orden_id: @orden.id).present?
+       @factura = Factura.find_by_orden_id(@orden.id)
+       redirect_to @factura
+    else
+       @factura = Factura.create!(orden_id:@orden.id)
+       redirect_to @factura
+    end
   end
 
   private
