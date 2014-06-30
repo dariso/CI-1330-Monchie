@@ -6,13 +6,14 @@ class User < ActiveRecord::Base
   has_one :usuario_cliente
   has_many :ordens
 
-  
-  belongs_to :role
-  before_create :set_default_role
+  ROLES = %w[admin moderator author]
+ #belongs_to :role
+
   
   private
-  def set_default_role 
-  	self.role ||= Role.find_by_name('registered')
+  
+  def role_symbols
+  [role.to_sym]
   end
   
 

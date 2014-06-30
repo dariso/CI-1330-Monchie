@@ -15,11 +15,22 @@
 <div class="form-actions">
   <%= link_to "Atrás",
               productos_path, :class => 'btn'  %>
+              
+              
+
+              
   <%= link_to "Editar",
               edit_producto_path(@producto), :class => 'btn' %>
+
+  
+
   <%= link_to "Eliminar",
               producto_path(@producto),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => '¿Está seguro que desea eliminar este producto?')) },
               :class => 'btn btn-danger' %>
+
+              
+          
+              
 </div>

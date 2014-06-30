@@ -17,6 +17,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
   <div>
+  
+  <%= f.label :role%>
+  <%= f.collection_select :role, User::ROLES, :to_s, :titleize %>
 
   <%= f.submit "Siguiente" %>
   
