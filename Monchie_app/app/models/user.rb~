@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_one :usuario_cliente
   has_many :ordens
 
-  ROLES = %w[admin moderator author]
+  ROLES = %w[restaurante cliente]
  #belongs_to :role
 
   

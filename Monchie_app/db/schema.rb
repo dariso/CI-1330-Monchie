@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140630034200) do
+ActiveRecord::Schema.define(version: 20140630142258) do
 
   create_table "emails", force: true do |t|
     t.string   "email"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20140630034200) do
     t.string   "username"
     t.integer  "role_id"
     t.string   "role"
+    t.integer  "roles_mask"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

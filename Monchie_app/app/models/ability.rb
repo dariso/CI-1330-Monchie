@@ -28,7 +28,7 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-    if user.role== "restaurante"
+    if user.roles_mask== 1
     can :manage, :all
     else
     can :read, :all
