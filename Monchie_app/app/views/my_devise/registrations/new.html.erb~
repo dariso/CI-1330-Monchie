@@ -15,11 +15,14 @@
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-    <%= link_to "Información personal", edit_usuario_cliente_path(current_user),:class => 'btn' %>
 
   <div>
   
-  <%= f.submit "Sign up" %>
+  
+  <%= f.label :role%>
+  <%= f.collection_select :role, User::ROLES, :to_s, :titleize %>
+
+  <%= f.submit "Siguiente" %>
   
   </div>
   	

@@ -6,7 +6,7 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'devise'
 
-gem "cancan"
+gem 'cancancan','~> 1.8'
 gem "role_model"
 
 gem "pdfkit"

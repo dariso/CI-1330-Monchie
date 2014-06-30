@@ -1,4 +1,5 @@
 class ProductosController < ApplicationController
+load_and_authorize_resource
   before_action :set_producto, only: [:show, :edit, :update, :destroy]
 
   # GET /productos
@@ -19,13 +20,18 @@ class ProductosController < ApplicationController
 
   # GET /productos/1/edit
   def edit
+  
+  authorize! :update, @producto
   end
 
   # POST /productos
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-   
+    @producto.restaurante_id = Restaurante.first!
+
+
+
 
     respond_to do |format|
       if @producto.save
