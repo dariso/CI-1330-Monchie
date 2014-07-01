@@ -1,0 +1,15 @@
+Package: wkhtmltox
+Version: 0.12.1
+License: LGPLv3
+Vendor: wkhtmltopdf.org
+Architecture: i386
+Maintainer: Ashish Kulkarni <kulkarni.ashish@gmail.com>
+Installed-Size: 121303
+Depends: fontconfig, libfontconfig1, libfreetype6, libpng12-0, zlib1g, libjpeg8, libssl1.0.0, libx11-6, libxext6, libxrender1, libstdc++6, libc6
+Conflicts: wkhtmltopdf
+Provides: wkhtmltopdf
+Replaces: wkhtmltopdf
+Section: utils
+Priority: extra
+Homepage: http://wkhtmltopdf.org
+Description: convert HTML to PDF and various image formats using QtWebkit
