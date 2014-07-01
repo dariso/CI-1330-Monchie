@@ -26,16 +26,27 @@
         <td><%= restaurante.canton %></td>
         <td><%= restaurante.distrito %></td>
         <td><%= restaurante.direccion %></td>
-
+        <td><%= restaurante.telefonos.first.telefono %></td>
+		
         <td><%=l restaurante.created_at %></td>
         <td>
+        
+        <% if can? :update, @restaurante %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_restaurante_path(restaurante), :class => 'btn btn-mini' %>
+                      
+        <%end%>   
+        
+        <% if can? :destroy, @restaurante %>   
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       restaurante_path(restaurante),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>
+        <%end%>
+                      
+                      
+                      
         </td>
       </tr>
     <% end %>

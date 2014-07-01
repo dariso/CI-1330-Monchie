@@ -21,14 +21,15 @@ load_and_authorize_resource
   # GET /productos/1/edit
   def edit
   
-  authorize! :update, @producto
+  #authorize! :update, @producto
   end
 
   # POST /productos
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-    @producto.restaurante_id = Restaurante.first!
+  
+    @producto.restaurante_id =current_user.id
 
 
 

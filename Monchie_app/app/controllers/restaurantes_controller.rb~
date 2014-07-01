@@ -15,6 +15,7 @@ class RestaurantesController < ApplicationController
   # GET /restaurantes/new
   def new
     @restaurante = Restaurante.new(params[:user].permit(:user_id))
+    
     @restaurante.with_blank_infoContacto
   end
 

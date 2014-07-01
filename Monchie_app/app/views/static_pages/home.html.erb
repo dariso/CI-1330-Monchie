@@ -8,9 +8,14 @@ Usuario: <input type="text" name="usuario">
 Password: <input type="password" name="password">
 </form>
 -->
+<%=%>
 <% if user_signed_in? %>
+	<%if current_user.roles_mask==1%>
+	<%= link_to "Entrar como Dependiente", productos_path,:class => 'btn' %></p>
+	<%else%>
 	<%= link_to "Entrar como Cliente", restaurantes_selRestaurante_path,:class => 'btn' %></p>
+	<%end%>
 <%end%>
-<p><%= link_to "Entrar como Dependiente", productos_path,:class => 'btn' %></p>
+<p>
 
 

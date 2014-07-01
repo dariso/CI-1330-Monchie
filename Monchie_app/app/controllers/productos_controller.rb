@@ -5,7 +5,7 @@ load_and_authorize_resource
   # GET /productos
   # GET /productos.json
   def index
-    @productos = Producto.all
+    @productos = Producto.where(restaurante_id: current_user)
   end
 
   # GET /productos/1
@@ -28,7 +28,8 @@ load_and_authorize_resource
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-    @producto.restaurante_id = Restaurante.first!
+  
+    @producto.restaurante_id =current_user.id
 
 
 

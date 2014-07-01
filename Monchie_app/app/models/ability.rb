@@ -31,7 +31,8 @@ class Ability
     if user.roles_mask== 1
     can :manage, :all
     else
-    can :read, :all
+    can :manage, :all
+    
     end
   end
 end

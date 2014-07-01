@@ -18,13 +18,18 @@
         <td id = "texto"><%= producto.descripcion %></td>
         <td id = "texto"><%= producto.precio %></td>
         <td>
+          <% if can? :update, @producto %>
           <%= link_to "Editar",
                       edit_producto_path(producto), :class => 'btn btn-mini' %>
+                        
+  	  <%end%> 
+  	  <% if can? :destroy, @producto %>
           <%= link_to "Eliminar",
                       producto_path(producto),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>
+           <%end%>
         </td>
       </tr>
     <% end %>

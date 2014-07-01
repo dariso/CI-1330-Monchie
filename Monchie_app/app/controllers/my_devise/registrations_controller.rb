@@ -10,7 +10,12 @@ class MyDevise::RegistrationsController < Devise::RegistrationsController
 	end
 	
 	def after_sign_up_path_for (resource)
-	 new_usuario_cliente_path(:user => { :user_id => resource.id } )
+		 if resource.roles_mask ==1
+		 new_restaurante_path(:user => { :user_id => resource.id } )
+		 else
+		 new_usuario_cliente_path(:user => { :user_id => resource.id } )
+		 end
 	end
+	
 
 end
