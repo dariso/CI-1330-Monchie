@@ -33,8 +33,7 @@
   <%= link_to 'Pagar',
               ordens_cambiaEstadoFinOrden_path, :class => 'btn' %>
   <%= link_to 'Cancelar',
-              factura_path(@factura),
-              :method => 'delete',
+              carrito_index_path,
               :data => { :confirm => '¿Está seguro que desea cancelar su orden?' },
               :class => 'btn btn-danger' %>
 </div>
