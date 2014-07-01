@@ -25,15 +25,22 @@
 </table>
 
 <div class="page-header">
+  <h5>Modo de retiro: <%= Orden.find(@factura.orden_id).modoretiro%></h5>
   <h3>Total a pagar: ¢<%= @factura.total%></h3>
 </div>
 
 <div class="form-actions">
   <%= link_to 'Pagar',
-              '/', :class => 'btn' %>
+              orden_cambiaEstadoFinOrden_path, :class => 'btn' %>
   <%= link_to 'Cancelar',
               factura_path(@factura),
               :method => 'delete',
               :data => { :confirm => '¿Está seguro que desea cancelar su orden?' },
               :class => 'btn btn-danger' %>
+
+              
+
+  <p id="pdf_link"><%= link_to "PDF", factura_path(@factura, :format => "pdf") %></p>
+
+
 </div>
