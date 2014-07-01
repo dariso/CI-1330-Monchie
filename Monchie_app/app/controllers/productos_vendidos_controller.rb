@@ -65,8 +65,8 @@ class ProductosVendidosController < ApplicationController
 
 
   def verCarrito
-     render :layout => 'iframe'
      @productos_vendidos = Orden.where(user_id:current_user.id).last.productos_vendidos
+     render :layout => 'iframe'
   end
 
   private

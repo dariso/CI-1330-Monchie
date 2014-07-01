@@ -70,9 +70,9 @@ load_and_authorize_resource
   end
 
   def selProductos
-    render :layout => 'iframe'
     @productos = Producto.all
     @productoComprado=params[:seleccionProducto]
+    render :layout => 'iframe'
   end
 
   private
