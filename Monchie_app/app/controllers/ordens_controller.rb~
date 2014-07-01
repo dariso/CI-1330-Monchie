@@ -62,13 +62,12 @@ class OrdensController < ApplicationController
   end
 
   def cambioModoRetiro
+
     @orden = Orden.where(user_id:current_user.id).last
   end
 
   def finalizarOrden
     @orden = Orden.where(user_id:current_user.id).last
-    @orden.update(estado:"Finalizada")
-    @orden.save!
     if Factura.where(orden_id: @orden.id).present?
        @factura = Factura.find_by_orden_id(@orden.id)
        redirect_to @factura
@@ -78,6 +77,12 @@ class OrdensController < ApplicationController
     end
   end
 
+  def cambiaEstadoFinOrden
+    @orden = Orden.where(user_id:current_user.id).last
+    @orden.update(estado:"Finalizada")
+    @orden.save!
+    redirect_to static_pages_home_path
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_orden

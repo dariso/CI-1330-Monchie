@@ -10,11 +10,13 @@ class ProductosVendidosController < ApplicationController
   # GET /productos_vendidos/1
   # GET /productos_vendidos/1.json
   def show
+    render :layout => 'iframe'
   end
 
   # GET /productos_vendidos/new
   def new
    @productos_vendido = ProductosVendido.new(params[:producto].permit(:producto_id))
+   render :layout => 'iframe'
   end
 
    # GET /productos_vendidos/1/edit
@@ -63,6 +65,7 @@ class ProductosVendidosController < ApplicationController
 
 
   def verCarrito
+     render :layout => 'iframe'
      @productos_vendidos = Orden.where(user_id:current_user.id).last.productos_vendidos
   end
 

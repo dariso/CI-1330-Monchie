@@ -21,7 +21,7 @@ load_and_authorize_resource
   # GET /productos/1/edit
   def edit
   
-  authorize! :update, @producto
+  #authorize! :update, @producto
   end
 
   # POST /productos

@@ -42,30 +42,9 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/"><%= image_tag 'banner.jpg', alt: 'MonchieApp', width: '240', height: '120' %></a>
-          <div class="container nav-collapse">
-            <ul class="nav">
-          <% if user_signed_in? %>
-			<li><%= link_to "Cerrar Sesión", destroy_user_session_path,method: :delete %></li>
-		  <%else%>
-			<li><%= link_to "Registrarse", new_user_registration_path %></li>
-	
-			<li><%= link_to "Iniciar Sesión", new_user_session_path %></li>
-                  <%end%>
-	      
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+  <br>
+  <br>
+  <br>
 
     <div class="container">
         <div class="row">
@@ -73,22 +52,6 @@
             <%= bootstrap_flash %>
             <%= yield %>
           </div>
-          <div class="span3">
-            <div id = "sidebar" class="well sidebar-nav">
-              <h3><%= image_tag 'logo.jpg', alt: 'Sidebar'%></h3>
-              <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li><!--
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>-->
-              </ul>
-            </div><!--/.well -->
-          </div><!--/span-->
-        </div><!--/row-->
-
-      <footer>
-        <p>&copy; Monchie Inc. 2014</p>
-      </footer>
 
     </div> <!-- /container -->
 

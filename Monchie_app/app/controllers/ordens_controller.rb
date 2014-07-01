@@ -63,6 +63,7 @@ class OrdensController < ApplicationController
 
   def cambioModoRetiro
     @orden = Orden.where(user_id:current_user.id).last
+    render :layout => 'iframe'
   end
 
   def finalizarOrden
