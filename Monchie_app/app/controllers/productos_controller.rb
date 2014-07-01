@@ -20,7 +20,6 @@ load_and_authorize_resource
 
   # GET /productos/1/edit
   def edit
-  
   #authorize! :update, @producto
   end
 
@@ -28,11 +27,7 @@ load_and_authorize_resource
   # POST /productos.json
   def create
     @producto = Producto.new(producto_params)
-  
     @producto.restaurante_id =current_user.id
-
-
-
 
     respond_to do |format|
       if @producto.save
@@ -70,8 +65,7 @@ load_and_authorize_resource
   end
 
   def selProductos
-    @productos = Producto.all
-    @productoComprado=params[:seleccionProducto]
+    @productos = Producto.where(restaurante_id:params[:restId])
     render :layout => 'iframe'
   end
 
