@@ -31,7 +31,7 @@ class Ability
     if user.roles_mask== 1
     can :manage, :all
     else
-    can :manage, :Productos_vendido
+    can :manage, :all
     
     end
   end
