@@ -1,7 +1,8 @@
 class Restaurante < ActiveRecord::Base
+belongs_to :user
 	has_many :telefonos, as: :telefonable, dependent: :destroy
 	has_many :emails, as: :emailable, dependent: :destroy
-	accepts_nested_attributes_for :telefonos,:emails,
+	accepts_nested_attributes_for :telefonos,
                                 reject_if:lambda { |attrs|
                                   attrs.all? { |key, value| value.blank? }
                                 },
@@ -9,7 +10,7 @@ class Restaurante < ActiveRecord::Base
 								
     def with_blank_infoContacto
 		2.times{ telefonos.build }
-		emails.build
+	
 		self
 	end
 end

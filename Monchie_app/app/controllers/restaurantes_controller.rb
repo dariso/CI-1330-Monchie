@@ -14,7 +14,7 @@ class RestaurantesController < ApplicationController
 
   # GET /restaurantes/new
   def new
-    @restaurante = Restaurante.new
+    @restaurante = Restaurante.new(params[:user].permit(:user_id))
     @restaurante.with_blank_infoContacto
   end
 
@@ -80,10 +80,11 @@ class RestaurantesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_restaurante
       @restaurante = Restaurante.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def restaurante_params
-      params.require(:restaurante).permit(:nombre,:provincia, :canton, :distrito, :direccion,telefonos_attributes:[:telefono,:id],emails_attributes:[:email,:id])
+      params.require(:restaurante).permit(:nombre,:provincia, :canton, :distrito, :direccion,:user_id,telefonos_attributes:[:telefono,:id])
     end
 end

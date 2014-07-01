@@ -35,7 +35,8 @@
     <% end %>
   </tbody>
 </table>
-
+<% if can? :update, @producto %>
 <%= link_to "Agregar Nuevo",
             new_producto_path,
             :class => 'btn' %>
+<%end%> 
