@@ -17,7 +17,7 @@
     <% @facturas.each do |factura| %>
       <tr>
         <td><%= factura.id %></td>
-        <td>¢<%= factura.total %></td>
+        <td><%= factura.total %></td>
         <td><%= factura.orden_id %></td>
         <td><%= Restaurante.find(Orden.find(factura.orden_id).restaurante_id).nombre %></td>
         <td><%=l factura.created_at %></td>
