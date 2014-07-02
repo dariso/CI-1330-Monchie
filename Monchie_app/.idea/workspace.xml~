@@ -40,13 +40,13 @@
       <file leaf-file-name="restaurantes_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/restaurantes_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="150">
               <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-
+=======
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
               <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="66" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
               <folding />
             </state>
           </provider>
@@ -55,13 +55,13 @@
       <file leaf-file-name="selRestaurante.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/restaurantes/selRestaurante.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1275">
               <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-
+=======
             <state vertical-scroll-proportion="-6.0416665" vertical-offset="110" max-vertical-offset="510">
               <caret line="17" column="112" selection-start-line="17" selection-start-column="112" selection-end-line="17" selection-end-column="112" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
               <folding />
             </state>
           </provider>
@@ -70,13 +70,13 @@
       <file leaf-file-name="schema.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1410">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-
+=======
             <state vertical-scroll-proportion="0.04021448" vertical-offset="360" max-vertical-offset="1845">
               <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
               <folding />
             </state>
           </provider>
@@ -85,13 +85,13 @@
       <file leaf-file-name="carrito_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/carrito_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="1320">
               <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-
+=======
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
               <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
               <folding />
             </state>
           </provider>
@@ -125,13 +125,13 @@
       <file leaf-file-name="edit.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/my_devise/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="1545">
               <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-
+=======
             <state vertical-scroll-proportion="6.5" vertical-offset="156" max-vertical-offset="525">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
               <folding />
             </state>
           </provider>
@@ -155,13 +155,13 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/carrito/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="1470">
               <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-
+=======
             <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="345">
               <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
               <folding />
             </state>
           </provider>
@@ -262,11 +262,11 @@
       <sortByType />
     </navigator>
     <panes>
-
+<<<<<<< HEAD
       <pane id="RailsProjectView" />
       <pane id="Scope" />
-
-
+=======
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -387,10 +387,11 @@
           </PATH>
         </subPane>
       </pane>
-
+<<<<<<< HEAD
+=======
       <pane id="Scope" />
       <pane id="RailsProjectView" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -540,11 +541,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-
+<<<<<<< HEAD
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
-
+=======
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -552,11 +553,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3191801" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25896415" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30553746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-
+=======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31155378" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3939828" sideWeight="0.50038433" order="9" side_tool="true" content_ui="tabs" />
@@ -851,10 +852,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/orden.rb">
       <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1410">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-
+=======
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
@@ -865,17 +866,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1530">
           <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/productos_vendidos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0" vertical-offset="819" max-vertical-offset="1320">
           <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-
+=======
         <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="1320">
           <caret line="18" column="29" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="29" />
           <folding />
@@ -952,7 +953,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="875" max-vertical-offset="1320">
           <caret line="67" column="63" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="63" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
           <folding />
         </state>
       </provider>
@@ -983,13 +984,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.44117647" vertical-offset="0" max-vertical-offset="1545">
           <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-
+=======
         <state vertical-scroll-proportion="0.04021448" vertical-offset="360" max-vertical-offset="1845">
           <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-
+>>>>>>> e73ca4f6470456974897bbbad3ba4867d4543627
           <folding />
         </state>
       </provider>
