@@ -17,7 +17,7 @@ class ProductosVendidosController < ApplicationController
   def new
    @productos_vendido = ProductosVendido.new(params[:producto].permit(:producto_id))
    producto = Producto.find(@productos_vendido.producto_id)
-   @restauranteUserId = Restaurante.find(producto.restaurante_id).user_id
+   @restauranteUserId = producto.restaurante_id
    render :layout => 'iframe'
   end
 
@@ -31,7 +31,8 @@ class ProductosVendidosController < ApplicationController
   def create
     @productos_vendido = ProductosVendido.new(productos_vendido_params)
     producto = Producto.find(@productos_vendido.producto_id)
-    @productos_vendido.orden_id = Orden.where(user_id:current_user.id,restaurante_id:producto.restaurante_id).last.id
+    restaurante = Restaurante.find_by_user_id(producto.restaurante_id)
+    @productos_vendido.orden_id = Orden.where(user_id:current_user.id,restaurante_id:restaurante.id).last.id
     respond_to do |format|
       if @productos_vendido.save
         format.html { redirect_to @productos_vendido, notice: 'Producto agregado exitosamente al carrito.' }
@@ -82,7 +83,7 @@ class ProductosVendidosController < ApplicationController
     def set_productos_vendido
       @productos_vendido = ProductosVendido.find(params[:id])
       producto = Producto.find(@productos_vendido.producto_id)
-      @restauranteUserId = Restaurante.find(producto.restaurante_id).user_id
+      @restauranteUserId = Restaurante.find_by_user_id(producto.restaurante_id).user_id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

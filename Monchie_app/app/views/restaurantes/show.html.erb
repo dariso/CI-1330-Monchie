@@ -20,17 +20,12 @@
       <dd><%= t.telefono %></dd>
   <% end %>
 
-  <% @restaurante.emails.each do |e| %>
-      <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
-      <dd><%= e.email %></dd>
-  <% end %>
-  
-  
+
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              restaurantes_path, :class => 'btn'  %>
+              static_pages_home_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_restaurante_path(@restaurante), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
