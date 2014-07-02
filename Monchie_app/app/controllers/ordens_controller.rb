@@ -20,6 +20,7 @@ class OrdensController < ApplicationController
   # GET /ordens/1/edit
   def edit
   end
+  
 
   # POST /ordens
   # POST /ordens.json
