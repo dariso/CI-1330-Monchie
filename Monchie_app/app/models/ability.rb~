@@ -37,7 +37,7 @@ class Ability
      can :manage, Orden
       can :manage, ProductosVendido
       can :read,Producto
-      can :selProducto,Producto
+      
       can :read,Restaurante
     
     end

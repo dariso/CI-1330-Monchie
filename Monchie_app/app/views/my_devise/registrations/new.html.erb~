@@ -25,7 +25,7 @@
 <% end %>
 <%= hidden_field_tag "user[roles][]", "" %>
 
-  <%= f.submit "Siguiente",:class => 'btn' %>
+  <%= f.submit "Siguien34te",:class => 'btn' %>
   
   </div>
   	

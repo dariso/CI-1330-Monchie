@@ -4,7 +4,7 @@ class RestaurantesController < ApplicationController
   # GET /restaurantes
   # GET /restaurantes.json
   def index
-    @restaurantes = Restaurante.where(user_id: current_user)
+    @restaurantes = Restaurante.where(id: current_user)
   end
 
   # GET /restaurantes/1
