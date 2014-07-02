@@ -37,7 +37,5 @@
   <%= link_to 'Cancelar',
               carrito_index_path(restauranteUser_id: @restauranteUserId),
               :class => 'btn btn-danger' %>
-              
-<!-- <p id="pdf_link"><%= link_to "PDF", factura_path(@factura, :format => "pdf") %></p> -->
 
 </div>
