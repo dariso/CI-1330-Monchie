@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140701062037) do
+ActiveRecord::Schema.define(version: 20140702000123) do
 
   create_table "emails", force: true do |t|
     t.string   "email"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20140701062037) do
     t.string   "modoretiro"
     t.string   "estado"
     t.integer  "user_id"
+    t.integer  "restaurante_id"
   end
 
   create_table "productos", force: true do |t|

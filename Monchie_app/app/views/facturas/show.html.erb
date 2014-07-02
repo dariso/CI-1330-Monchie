@@ -3,6 +3,8 @@
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
 
+<h1>Restaurante: <%= @restaurante.nombre %></h1>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @productos_vendidos = Orden.where(user_id:current_user.id).last.productos_vendidos %>
+    <% @productos_vendidos = Orden.where(user_id:current_user.id,restaurante_id:@restaurante.id).last.productos_vendidos %>
     <% @productos_vendidos.each do |producto|%>
       <tr>
         <% @prod = Producto.find(producto.producto_id) %>
@@ -31,14 +33,9 @@
 
 <div class="form-actions">
   <%= link_to 'Pagar',
-              ordens_cambiaEstadoFinOrden_path, :class => 'btn' %>
+              ordens_cambiaEstadoFinOrden_path(restaurante_id:@restaurante.id), :class => 'btn' %>
   <%= link_to 'Cancelar',
-              carrito_index_path,
-              :data => { :confirm => '¿Está seguro que desea cancelar su orden?' },
+              carrito_index_path(restauranteUser_id: @restauranteUserId),
               :class => 'btn btn-danger' %>
-
-              
-<!-- <p id="pdf_link"><%= link_to "PDF", factura_path(@factura, :format => "pdf") %></p> -->
-
 
 </div>

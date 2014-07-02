@@ -10,6 +10,7 @@
       <th><%= model_class.human_attribute_name(:user_id) %></th>
       <th><%= model_class.human_attribute_name(:modoretiro) %></th>
       <th><%= model_class.human_attribute_name(:estado) %></th>
+      <th><%= model_class.human_attribute_name(:restaurante_id)%></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -21,6 +22,7 @@
         <td><%= orden.user_id %></td>
         <td><%= orden.modoretiro %></td>
         <td><%= orden.estado %></td>
+        <td><%= Restaurante.find(orden.restaurante_id).nombre%></td>
 
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

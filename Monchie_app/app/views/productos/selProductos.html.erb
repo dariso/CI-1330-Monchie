@@ -21,7 +21,7 @@
   </tbody>
 </table>
 
-<%= link_to 'Ver Carrito', productos_vendidos_verCarrito_path, :class => 'btn' %>
-<%= link_to 'Modo Retiro', ordens_cambioModoRetiro_path, :class => 'btn' %>
+<%= link_to 'Ver Carrito', productos_vendidos_verCarrito_path(restauranteUser_Id:@restauranteUserId), :class => 'btn' %>
+<%= link_to 'Modo Retiro', ordens_cambioModoRetiro_path(restauranteUser_Id:@restauranteUserId), :class => 'btn' %>
 <br>
 

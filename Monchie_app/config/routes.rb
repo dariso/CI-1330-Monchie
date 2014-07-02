@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   
   get 'productos_vendidos/verCarrito'
 
+  get 'ordens/crearOCargarOrden'
+
   get 'ordens/cambioModoRetiro'
 
   get 'ordens/finalizarOrden'

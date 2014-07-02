@@ -16,18 +16,22 @@ class ProductosVendidosController < ApplicationController
   # GET /productos_vendidos/new
   def new
    @productos_vendido = ProductosVendido.new(params[:producto].permit(:producto_id))
+   producto = Producto.find(@productos_vendido.producto_id)
+   @restauranteUserId = Restaurante.find(producto.restaurante_id).user_id
    render :layout => 'iframe'
   end
 
    # GET /productos_vendidos/1/edit
   def edit
+    render :layout => 'iframe'
   end
 
   # POST /productos_vendidos
   # POST /productos_vendidos.json
   def create
     @productos_vendido = ProductosVendido.new(productos_vendido_params)
-    @productos_vendido.orden_id = Orden.where(user_id:current_user.id).last.id###
+    producto = Producto.find(@productos_vendido.producto_id)
+    @productos_vendido.orden_id = Orden.where(user_id:current_user.id,restaurante_id:producto.restaurante_id).last.id
     respond_to do |format|
       if @productos_vendido.save
         format.html { redirect_to @productos_vendido, notice: 'Producto agregado exitosamente al carrito.' }
@@ -56,23 +60,29 @@ class ProductosVendidosController < ApplicationController
   # DELETE /productos_vendidos/1
   # DELETE /productos_vendidos/1.json
   def destroy
+    producto = Producto.find(@productos_vendido.producto_id)
+    restauranteUserId = Restaurante.find(producto.restaurante_id).user_id
     @productos_vendido.destroy
     respond_to do |format|
-      format.html { redirect_to productos_vendidos_verCarrito_path }
+      format.html { redirect_to productos_vendidos_verCarrito_path(restauranteUser_Id:restauranteUserId)}
       format.json { head :no_content }
     end
   end
 
 
   def verCarrito
-     @productos_vendidos = Orden.where(user_id:current_user.id).last.productos_vendidos
-     render :layout => 'iframe'
+    @restauranteUserId = params[:restauranteUser_Id]
+    restauranteId = Restaurante.find_by_user_id(@restauranteUserId).id
+    @productos_vendidos = Orden.where(user_id:current_user.id,restaurante_id:restauranteId).last.productos_vendidos
+    render :layout => 'iframe'
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_productos_vendido
       @productos_vendido = ProductosVendido.find(params[:id])
+      producto = Producto.find(@productos_vendido.producto_id)
+      @restauranteUserId = Restaurante.find(producto.restaurante_id).user_id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

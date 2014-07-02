@@ -19,6 +19,6 @@
 <div class="form-actions">
     <%= f.submit "Agregar", :class => 'btn btn-primary' %>
     <%= link_to "Cancelar",
-                productos_selProductos_path, :class => 'btn' %>
+                productos_selProductos_path(restauranteUser_Id:@restauranteUserId), :class => 'btn' %>
   </div>
 <% end %>

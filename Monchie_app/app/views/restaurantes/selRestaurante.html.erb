@@ -15,7 +15,7 @@
   <tbody>
   <% @restaurantes.each do |restaurante| %>
       <tr>
-        <td id = "texto"><%= link_to restaurante.nombre, carrito_index_path(restaurante_id: restaurante.user_id)%></td>
+        <td id = "texto"><%= link_to restaurante.nombre, ordens_crearOCargarOrden_path(restauranteUser_id: restaurante.user_id)%></td>
         <td id = "texto"><%=  restaurante.telefonos.first.telefono %></td>
         <td id = "texto"><%= restaurante.distrito %></td>
         <td id = "texto"><%= restaurante.direccion %></td>

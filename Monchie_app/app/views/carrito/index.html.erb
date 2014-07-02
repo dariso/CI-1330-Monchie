@@ -1,7 +1,7 @@
 <table border=1>
 	<tr>
 		<td width="800" height="200">
-		<iframe src=<%=productos_selProductos_path(restId:@restId)%> width="850" height="500"></iframe>
+		<iframe src=<%=productos_selProductos_path(restauranteUser_Id:@restauranteUserId)%> width="850" height="500" frameBorder= 0></iframe>
         </td>
 
 	</tr>
@@ -10,7 +10,7 @@
 
 
 <%= link_to 'Atras',restaurantes_selRestaurante_path,class: 'btn'%>
-<%= link_to 'Siguiente', ordens_finalizarOrden_path,:class => 'btn' %>
+<%= link_to 'Siguiente', ordens_finalizarOrden_path(restauranteUser_Id:@restauranteUserId),:class => 'btn' %>
 
 
 

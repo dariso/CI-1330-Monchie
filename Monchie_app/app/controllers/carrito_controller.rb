@@ -1,5 +1,5 @@
 class CarritoController < ApplicationController
   def index
-    @restId = params[:restaurante_id]
+    @restauranteUserId = params[:restauranteUser_id]
   end
 end

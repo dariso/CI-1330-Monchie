@@ -1,6 +1,6 @@
 <%- model_class = ProductosVendido -%>
 <div class="page-header">
-  <h1>Producto Agregado a Orden</h1>
+  <h1>Pedido Actualizado</h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -20,7 +20,7 @@
 
 <div class="form-actions">
   <%= link_to "Atrás",
-              productos_selProductos_path, :class => 'btn'  %>
+              productos_selProductos_path(restauranteUser_Id:@restauranteUserId), :class => 'btn'  %>
   <%= link_to "Editar",
               edit_productos_vendido_path(@productos_vendido), :class => 'btn' %>
   <%= link_to "Eliminar",

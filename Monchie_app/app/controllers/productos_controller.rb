@@ -65,7 +65,8 @@ load_and_authorize_resource
   end
 
   def selProductos
-    @productos = Producto.where(restaurante_id:params[:restId])
+    @restauranteUserId = params[:restauranteUser_Id]
+    @productos = Producto.where(restaurante_id:params[:restauranteUser_Id])
     render :layout => 'iframe'
   end
 
